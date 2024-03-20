@@ -1,4 +1,4 @@
-name: 🚀 CD
+name: CD
 
 on:
   workflow_run:
@@ -8,12 +8,13 @@ on:
 
 jobs:
   deploy:
-    name: 🛠️ Deploy to Linode
+    name: Deploy to Linode
     runs-on: ubuntu-latest
+
     steps:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
       
       - name: Run SSH commands
         run: |
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USER_NAME }}@${{ secrets.HOST }} 'cd /bookscanner_refactor && git pull origin main && docker-compose -f docker-compose.prod.yaml down && docker-compose -f docker-compose.prod.yaml up -d'
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USER_NAME }}@${{ secrets.HOST }} 'cd /bookscanner_refactor && git pull origin main && docker-compose -f docker-compose.prod.yaml down && docker-compose -f docker-compose.prod.yaml up -d'
