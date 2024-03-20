@@ -8,7 +8,7 @@ export default class UserRequest {
      */
 
     // Backend URL for user-related requests
-    //NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    NEXT_PUBLIC_BACKEND_URL = "http://172.104.241.247:8000";
     //const NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
     // Method to construct sign-up request
@@ -20,7 +20,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/register`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/register`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
@@ -44,7 +44,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/login`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/login`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
@@ -63,7 +63,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/logout`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/logout`,
             withCredentials: true,
             headers: {
                 'Access-Control-Allow-Origin': '*', 
@@ -83,7 +83,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'get',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/users/me`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/users/me`,
             withCredentials: true,
             headers: {
                 'Access-Control-Allow-Origin': '*', 
@@ -103,7 +103,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'get',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/users/history`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/users/history`,
             withCredentials: true,
             headers: {
                 'Access-Control-Allow-Origin': '*', 
@@ -121,7 +121,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'get',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/users/recommendations`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/users/recommendations`,
             withCredentials: true,
             headers: {
                 'Access-Control-Allow-Origin': '*', 
@@ -139,7 +139,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'get',
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/bookmarks`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/bookmarks`,
             withCredentials: true,
             headers: {
                 'Access-Control-Allow-Origin': '*', 
