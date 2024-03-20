@@ -6,7 +6,8 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:3000",
-    "http://172.104.241.247:3000"
+    "http://172.104.241.247:3000",
+    "http://172.104.241.247:8000"
 ]
 
 
