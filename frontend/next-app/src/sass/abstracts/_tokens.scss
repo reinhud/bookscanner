@@ -1,0 +1,177 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
+
+// ==================== Defaults ==================== //
+// ===== Theming ===== //
+$active-theme: $light;
+// ===== Colors ===== //
+$color-text-default: $color-neutral-700;
+$color-background-default: $color-neutral-100;
+
+// ===== Typography ===== //
+$letter-spacing-loose: 0;
+
+// ===== Borders ===== //
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+// ===== Shadows ===== //
+$drop-shadow-hover: 2px 2px 5px $color-primary-900;
+$drop-shadow-neutral: 5px 5px 10px $color-primary-900;
+$box-shadow-neumorphic-neutral:
+    5px 5px 10px $color-neutral-300,
+    -5px -5px 10px $color-neutral-000;
+$box-shadow-neumorphic-neutral-hover:
+    3px 3px 6px $color-neutral-200,
+    -3px -3px 6px $color-neutral-000;
+
+// ===== Container ===== //
+$container-min-margin-inline: $size-4;
+$container-max-width: 96rem;
+$container-max-width-narrow: 40rem;
+$container-max-width-wide: 75rem;
+
+// ==================== Components ==================== //
+// ===== Navigation ===== //
+$navigation-background-color: $color-background-default;
+$navigation-color: $color-neutral-900;
+$navigation-color-hover: $color-neutral-500;
+$navigation-color-active: $color-accent-700;
+$navigation-link-text-decoration: none;
+$navigation-font-family: $font-family-base;
+$navigation-font-weight: $font-weight-bold;
+// Mobile
+$navigation-font-size-small: $font-size-500;
+$navigation-gap-small: $size-9;
+$navigation-padding-small: $size-8 $size-8;
+$navigation-color-small: $color-background-default;
+// Desktop
+$navigation-font-size-medium: $font-size-600;
+$navigation-gap-medium: $size-4;
+$navigation-padding-medium: $size-2 $size-2;
+
+// ===== Header ===== //
+$header-font-family: $font-family-accent;
+$header-color-default: $color-primary-800;
+$header-font-weight: $font-weight-bold;
+$header-letter-spacing: $letter-spacing-loose;
+$header-line-height: 1.1;
+$header-text-transform: none;
+
+$header-1-font-size: $font-size-900;
+$header-1-color: $header-color-default;
+$header-2-font-size: $font-size-800;
+$header-2-color: $header-color-default;
+$header-3-font-size: $font-size-700;
+$header-3-color: $header-color-default;
+
+// ===== SignIn Button ===== //
+$signin_button-font-family: $font-family-base;
+$signin_button-font-size: $font-size-600;
+$signin_button-font-weight: $font-weight-bold;
+$signin_button-border-radius: $border-radius-2;
+$signin_button-padding: $size-4 $size-8;
+$signin_button-margin: $size-2;
+$signin_button-background-color: $color-primary-700;
+$signin_button-color: $color-background-default;
+$signin_button-color-hover: $color-primary-500;
+$signin_button-width: 20rem;
+
+// ===== Book Card ===== //
+$book-card-border: 2px solid $color-primary-800;
+$book-card-border-radius: $border-radius-2;
+$book-card-box-shadow: $box-shadow-neumorphic-neutral;
+$book-card-box-shadow-hover: $box-shadow-neumorphic-neutral-hover;
+
+$book-card-title-font-family: $font-family-accent;
+$book-card-title-font-weight: $header-font-weight;
+$book-card-title-font-size: $font-size-700;
+$book-card-title-color: $color-primary-800;
+$book-card-label-font-weight: $header-font-weight;
+$book-card-label-font-size: $font-size-700;
+$book-card-label-color: $color-text-default;
+$book-card-value-font-weight: $font-weight-default;
+$book-card-value-font-size: $font-size-400;
+$book-card-value-color: $color-text-default;
+$book-card--info-font-weight: $font-weight-default;
+$book-card--info-font-size: $font-size-300;
+$book-card--info-color: $color-text-default;
+
+// ===== Book Modal ===== //
+$book-modal-background-color: $color-background-default;
+$book-modal-box-shadow: $box-shadow-neumorphic-neutral;
+$book-modal-border-radius: $border-radius-2;
+$book-modal-title-font-family: $font-family-accent;
+$book-modal-title-font-weight: $header-font-weight;
+$book-modal-title-font-size: $font-size-800;
+$book-modal-title-color: $color-primary-800;
+$book-modal-label-font-family: $font-family-base;
+$book-modal-label-font-weight: $header-font-weight;
+$book-modal-label-font-size: $font-size-400;
+$book-modal-label-color: $color-text-default;
+$book-modal-value-font-family: $font-family-base;
+$book-modal-value-font-weight: $font-weight-default;
+$book-modal-value-font-size: $font-size-400;
+$book-modal-value-color: $color-text-default;
+
+// ===== Login Modal ===== //
+$login-modal-background-color: $color-background-default;
+$login-modal-box-shadow: $box-shadow-neumorphic-neutral;
+$login-modal-border-radius: $border-radius-2;
+$login-modal-header-font-family: $font-family-accent;
+$login-modal-header-font-weight: $header-font-weight;
+$login-modal-header-font-size: $font-size-800;
+$login-modal-header-color: $color-primary-800;
+$login-modal-link-text-decoration: none;
+$login-modal-link-color: $color-primary-800;
+$login-modal-link-color-hover: $navigation-color-hover;
+$login-modal-link-font-family: $font-family-base;
+$login-modal-link-font-size: $font-size-400;
+
+
+// ===== Book Search Box ===== //
+$book-search-box-background-color: $color-primary-800;
+$book-search-box-border-radius: $border-radius-2;
+$book-search-box-box-shadow: $box-shadow-neumorphic-neutral;
+$book-search-box-padding: $size-4;
+$book-search-box-file-background-color: $color-background-default;
+$book-search-box-manual-background-color: $color-background-default;
+$book-search-box-manual-header-font-weight: $header-font-weight;
+$book-search-box-manual-header-font-size: $font-size-700;
+$book-search-box-manual-header-color: $color-background-default;
+$book-search-box-manual-input-font-family: $font-family-base;
+$book-search-box-manual-input-font-size: $font-size-500;
+$book-search-box-manual-input-font-weight: $font-weight-default;
+$book-search-box-manual-input-border: 2px solid #ccc;
+$book-search-box-manual-input-cursor: pointer;
+$book-search-box-manual-input-focus-outline: none;
+$book-search-box-manual-input-focus-border-color: $color-primary-700;
+$search-modal-background-color: $color-background-default;
+$search-modal-box-shadow: $drop-shadow-neutral;
+$search-modal-border-radius: $border-radius-2;
+$search-modal-font-family: $font-family-accent;
+$search-modal-font-weight: $header-font-weight;
+$search-modal-font-size: $font-size-600;
+$search-modal-color: $color-text-default;
+
+
+// ===== Body ===== //
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.5;
+$body-font-weight: $font-weight-default;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+// ===== Section ===== //
+$section-background-color: $color-background-default;
+$section-padding: $size-4;
+$section-header-font-family: $font-family-base;
+$section-header-font-weight: $header-font-weight;
+$section-header-font-size: $header-3-font-size;
+$section-header-color: $color-text-default;
+
+// ===== Errors ===== //
+$error-color: $color-accent-500;
+$error-font-size: $font-size-300;

@@ -1,0 +1,97 @@
+@use '../abstracts' as *;
+
+.book-search-box {
+    /* Position Stuff */
+
+    /* Box Model Stuff */
+    background-color: $book-search-box-background-color;
+    border-radius: $book-search-box-border-radius;
+    box-shadow: $book-search-box-box-shadow;
+    padding: $size-4;
+    width: 100%;
+
+    /* Display Stuff */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: $book-modal-box-shadow;
+
+    @include mq(large) {
+        flex-direction: row;
+    }
+
+    &__file {
+        display: flex;
+        width: 100%;
+        background-color: $color-background-default;
+        justify-content: center;
+        border-radius: $border-radius-2;
+    }
+
+    &__manual {
+        /* Display Stuff */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $size-4;
+
+        &__header {
+            /* Typography Stuff */
+            font-weight: $book-search-box-manual-header-font-weight;
+            padding-bottom: $size-4;
+            font-size: $book-search-box-manual-header-font-size;
+            color: $book-search-box-manual-header-color;
+            text-align: center;
+        }
+
+        input {
+            /* Box Model Stuff */
+            padding: $size-4;
+            border-radius: $border-radius-2;
+            border: 2px solid #ccc;
+
+            /* Typography Stuff */
+            font-family: $book-search-box-manual-input-font-family;
+            font-size: $book-search-box-manual-input-font-size;
+            font-weight: $book-search-box-manual-input-font-weight;
+
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+                border-color: $color-primary-700; // Adjust focus style
+            }
+        }
+    }
+}
+
+
+.search-modal {
+    /* Box Model Stuff */
+    border: 2px solid $color-text-default;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   // Center the modal
+    width: 40%;
+    height: 20%;
+    max-width: 60rem;
+    max-height: 30rem;
+    /* Display Stuff */
+    z-index: 10000;
+    display: flex;
+    padding: $size-4;
+    align-items: center;
+    justify-content: center;
+    background-color: $search-modal-background-color;  
+    box-shadow: $search-modal-box-shadow;
+    border-radius: $search-modal-border-radius; 
+    font-weight: $search-modal-font-weight;
+    font-size: $search-modal-font-size;
+    color: search-modal-color;
+    
+}
+
+.search-modal.error {
+    background-color: $color-error-background;
+}

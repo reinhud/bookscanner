@@ -1,0 +1,55 @@
+@use '../../abstracts' as *;
+
+.carousel-container {
+    /* Position Stuff */
+    /* Box Model Stuff */
+    margin: $container-min-margin-inline;
+    /* Display Stuff */
+    display: flex; // Use flexbox for layout
+    flex-direction: column; // Arrange child elements vertically
+    /* Typography Stuff */
+    /* Misc */
+    max-width: $container-max-width; // Set a maximum width for the container
+    /* Manipulation Stuff */
+    /* Misc */
+    overflow: hidden; // Ensure the container doesn't overflow
+}
+
+.carousel {
+    min-height: 500px;
+    &__content {
+    }
+}
+
+.carousel-dot-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+        button {
+            border: 2px solid $color-neutral-900;
+            border-radius: 50%; /* Make the dot circular */
+            width: 15px; /* Adjust the size of the dot */
+            height: 15px; /* Adjust the size of the dot */
+            margin: 0 5px; /* Adjust the spacing between dots */
+            background-color: none; /* Color of active dots */
+
+            &:focus {
+                background-color: $navigation-color-active; /* Color of active dots */
+            }
+
+            &:hover {
+                background-color: $navigation-color-hover; /* Color of active/hovered dots */
+            }
+        }
+    }
+}
+
+.react-multi-carousel-dot--active button {
+    /* Styles for active dot */
+    background-color: $navigation-color-active !important;
+}

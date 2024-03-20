@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.page-header {
+    /* Position Stuff */
+    /* Box Model Stuff */
+    padding-bottom: $size-4;
+    /* Display Stuff */
+    display: flex;
+    flex-direction: column;
+    /* Typography Stuff */
+    font-size: $header-2-font-size;
+    font-weight: $header-font-weight;
+    letter-spacing: $header-letter-spacing;
+    line-height: $header-line-height;
+    text-transform: $header-text-transform;
+    /* Manipulation Stuff */
+    /* Misc */
+}

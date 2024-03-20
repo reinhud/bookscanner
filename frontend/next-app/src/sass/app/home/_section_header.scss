@@ -1,0 +1,84 @@
+@use '../../abstracts' as *;
+
+.section_header {
+    /* Position Stuff */
+    /* Box Model Stuff */
+    padding: $size-1;
+    /* Display Stuff */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Typography Stuff */
+    font-weight: $header-font-weight;
+    letter-spacing: $header-letter-spacing;
+    line-height: $header-line-height;
+    /* Manipulation Stuff */
+    /* Misc */
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        /* Display Stuff */
+        /* Typography Stuff */
+        font-size: $header-3-font-size;
+        /* Manipulation Stuff */
+        /* Misc */
+    }
+
+    &__link {
+        /* Position Stuff */
+        /* Box Model Stuff */
+
+        /* Display Stuff */
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        /* Typography Stuff */
+        /* Manipulation Stuff */
+        &:hover {
+            .section_header__link__text {
+                color: $color-neutral-500; // Change the text color on hover
+            }
+
+            .section_header__link__icon svg path {
+                stroke: $navigation-color-hover; // Change the stroke color of the SVG on hover
+            }
+        }
+        /* Misc */
+
+        &__text {
+            /* Position Stuff */
+            /* Box Model Stuff */
+            padding: $size-2;
+            /* Display Stuff */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Typography Stuff */
+            font-size: $font-size-600;
+            color: $color-accent-700;
+            /* Manipulation Stuff */
+            white-space: nowrap; // Prevent text from wrapping
+            /* Misc */
+        }
+
+        &__icon {
+            /* Position Stuff */
+            /* Box Model Stuff */
+            width: $size-9;
+            height: $size-9;
+            /* Display Stuff */
+            /* Typography Stuff */
+            /* Manipulation Stuff */
+            /* Misc */
+
+            svg path {
+                stroke: $navigation-color-active; // Adjust the stroke color when the Link is active
+            }
+        }
+    }
+}

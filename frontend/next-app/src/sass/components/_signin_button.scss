@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.signin_button {
+    /* Position Stuff */
+    /* Box Model Stuff */
+    border-radius: $signin_button-border-radius;
+    width: $signin_button-width;
+    //margin: $signin_button-margin;
+    padding: $signin_button-padding;
+    background: $signin_button-background-color;
+    /* Display Stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $box-shadow-neumorphic-neutral;
+    border: none;
+    /* Typography Stuff */
+    font-family: $signin_button-font-family;
+    font-size: $signin_button-font-size;
+    font-weight: $signin_button-font-weight;
+    color: $signin_button-color;
+    /* Manipulation Stuff */
+    &:hover {
+        box-shadow: $box-shadow-neumorphic-neutral-hover;
+        cursor: pointer;
+    }
+    /* Misc */
+}

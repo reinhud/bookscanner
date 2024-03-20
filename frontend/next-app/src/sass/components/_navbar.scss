@@ -1,0 +1,164 @@
+@use '../abstracts' as *;
+@use 'sass:color';
+
+nav {
+    //border: 1px solid red;
+    // ===== Mobile ===== //
+    /* Position Stuff */
+    position: fixed;
+    bottom: 0;
+
+    /* Box Model Stuff */
+    width: 100%; //#TODO: if i do inherit here it works for large screens but not for small, for small the other way around
+    background-color: $navigation-background-color;
+    padding: $size-8;
+    /* Display Stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's on top of everything */
+
+    /* Typography Stuff */
+
+    /* Typography Stuff */
+
+    /* Misc */
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            transition: fill 0.3s ease; // Add a transition for smooth color change
+            display: flex;
+            width: 70%;
+            max-width: 4rem;
+            height: 70%;
+            max-height: 4rem;
+
+            border-bottom: 4px solid $color-background-default;
+
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                /* Box Model Stuff */
+                /* Typography Stuff */
+                svg path {
+                    stroke: $navigation-color-hover;
+                }
+            }
+        }
+    }
+
+    .active .icon svg path {
+        stroke: $navigation-color-active; // Adjust the stroke color when the Link is active
+    }
+
+    .active .icon {
+        border-bottom: 4px solid $navigation-color-active;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            svg path {
+                stroke: $navigation-color-active; // Set the stroke color back to its initial state
+            }
+        }
+    }
+
+    /* Manipulation Stuff */
+    // ===== Desktop ===== //
+    @include mq(large) {
+        // Change position to fixed and top to 0 on medium screens
+        position: fixed;
+        top: 0;
+        bottom: auto; // Set bottom to auto to override the bottom positioning
+        width: min(100% - var(--padding), var(--max-width));
+        justify-content: space-around;
+        .mobile {
+            display: none;
+        }
+        .desktop {
+            display: block;
+        }
+    }
+
+    h2 {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        padding-right: $size-12;
+        /* Display Stuff */
+        /* Typography Stuff */
+        font-family: $header-font-family;
+        font-size: $header-2-font-size;
+        font-weight: $header-font-weight;
+        letter-spacing: $header-letter-spacing;
+        line-height: $header-line-height;
+        text-transform: $header-text-transform;
+        color: $header-color-default;
+        /* Manipulation Stuff */
+        /* Misc */
+    }
+
+    ul {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        width: 100%;
+        max-width: 50rem;
+        /* Display Stuff */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        /* Typography Stuff */
+
+        /* Typography Stuff */
+        list-style: none;
+
+        /* Manipulation Stuff */
+
+        /* Misc */
+
+        li {
+            /* Position Stuff */
+            /* Box Model Stuff */
+            /* Display Stuff */
+            /* Typography Stuff */
+            text-decoration: $navigation-link-text-decoration;
+            font-family: $navigation-font-family;
+            font-weight: $navigation-font-weight;
+            font-size: $navigation-font-size-small;
+            stroke: $navigation-color;
+            /* Manipulation Stuff */
+
+            /* Misc */
+        }
+
+        a {
+            /* Position Stuff */
+            /* Box Model Stuff */
+            /* Display Stuff */
+            /* Typography Stuff */
+            text-decoration: $navigation-link-text-decoration;
+            font-family: $navigation-font-family;
+            font-weight: $navigation-font-weight;
+            font-size: $navigation-font-size-small;
+            color: $navigation-color;
+            /* Manipulation Stuff */
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                /* Box Model Stuff */
+                /* Typography Stuff */
+                color: $navigation-color-hover;
+            }
+            &.active {
+                /* Box Model Stuff */
+                /* Typography Stuff */
+                color: $navigation-color-active;
+            }
+
+            /* Misc */
+        }
+    }
+}

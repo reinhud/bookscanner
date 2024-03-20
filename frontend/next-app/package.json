@@ -1,0 +1,43 @@
+{
+    "name": "next-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "WATCHPACK_POLLING=true next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^2.2.1",
+        "@tanstack/react-query": "^5.28.0",
+        "axios": "^1.6.7",
+        "next": "14.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-dropzone": "^14.2.3",
+        "react-hook-form": "^7.51.0",
+        "react-multi-carousel": "^2.8.4",
+        "react-native-image-picker": "^7.1.1",
+        "react-redux": "^9.1.0",
+        "sass": "^1.72.0"
+    },
+    "devDependencies": {
+        "@tanstack/eslint-plugin-query": "^5.27.7",
+        "@types/node": "^20.11.27",
+        "@types/react": "^18.2.65",
+        "@types/react-dom": "^18.2.22",
+        "eslint": "^8.57.0",
+        "eslint-config-next": "14.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "msw": "^2.2.3",
+        "prettier": "3.1.1",
+        "typescript": "^5.4.2"
+    },
+    "msw": {
+        "workerDirectory": [
+            "public"
+        ]
+    }
+}

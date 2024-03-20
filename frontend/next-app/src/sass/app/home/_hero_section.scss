@@ -1,0 +1,100 @@
+@use '../../abstracts' as *;
+
+.hero-section {
+    /* Position Stuff */
+    justify-self: center;
+    /* Box Model Stuff */
+    width: clamp(25rem, 100%, 40rem);
+    /* Display Stuff */
+    display: flex;
+    flex-direction: column;
+
+    gap: $size-4;
+    /* Typography Stuff */
+
+    /* Manipulation Stuff */
+    @include mq(large) {
+        justify-self: start;
+    }
+    /* Misc */
+
+    &__welcome {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        padding: $size-4;
+        /* Display Stuff */
+        display: flex;
+        gap: $size-6;
+        /* Typography Stuff */
+        /* Manipulation Stuff */
+        /* Misc */
+
+        &__image {
+            /* Position Stuff */
+            position: relative;
+            /* Box Model Stuff */
+            /* Display Stuff */
+            /* Typography Stuff */
+            /* Manipulation Stuff */
+            /* Misc */
+            border-radius: 10rem;
+            border: 2px solid $color-primary-800;
+            box-shadow: $box-shadow-neumorphic-neutral;
+            width: 10rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        &__text {
+            /* Position Stuff */
+            /* Box Model Stuff */
+            /* Display Stuff */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Typography Stuff */
+            /* Manipulation Stuff */
+            /* Misc */
+
+            &__greeting {
+                /* Position Stuff */
+                /* Box Model Stuff */
+                /* Display Stuff */
+                /* Typography Stuff */
+                font-size: $header-2-font-size;
+                font-weight: $font-weight-semi-bold;
+                letter-spacing: $header-letter-spacing;
+                line-height: $header-line-height;
+                text-transform: $header-text-transform;
+
+                /* Manipulation Stuff */
+
+                /* Misc */
+            }
+
+            &__username {
+                /* Position Stuff */
+                /* Box Model Stuff */
+                /* Display Stuff */
+                /* Typography Stuff */
+                font-family: $header-font-family;
+                font-size: $header-1-font-size;
+                font-weight: $header-font-weight;
+                letter-spacing: $header-letter-spacing;
+                line-height: $header-line-height;
+                text-transform: $header-text-transform;
+                /* Manipulation Stuff */
+                /* Misc */
+            }
+        }
+    }
+
+    &__search-box {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        /* Display Stuff */
+        /* Typography Stuff */
+        /* Manipulation Stuff */
+        /* Misc */
+    }
+}

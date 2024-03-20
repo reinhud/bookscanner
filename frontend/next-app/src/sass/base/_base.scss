@@ -1,0 +1,44 @@
+@use '../abstracts/' as *;
+
+html {
+}
+
+body {
+    /* Position Stuff */
+    position: relative;
+    /* Box Model Stuff */
+    border: 1px solid green;
+    background-color: $body-background-color;
+    margin: 0 auto; /* Center the container horizontally */
+    /* Display Stuff */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
+
+    /* Typography Stuff */
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    font-weight: $body-font-weight;
+    color: $body-text-color;
+
+    /* Manipulation Stuff */
+    scroll-behavior: smooth;
+    overflow-y: auto; /* Vertical scrolling */
+
+    // ===== Desktop Medium ===== //
+    @include mq(medium) {
+        --padding: #{$container-min-margin-inline} * 2;
+        --max-width: #{$container-max-width};
+        //box-shadow: $box-shadow-neumorphic-neutral;
+        border-radius: $border-radius-2;
+        width: min(100% - var(--padding), var(--max-width));
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+    &.active-modal {
+        overflow-y: hidden;
+    }
+}

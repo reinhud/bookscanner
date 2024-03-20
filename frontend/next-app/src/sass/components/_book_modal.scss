@@ -1,0 +1,178 @@
+@use '../abstracts' as *;
+
+.modal {
+}
+
+.modal-overlay {
+    // Positioning
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Background
+    //background-color: rgba(0, 0, 0, 0.1); // Semi-transparent black overlay
+    background-color: rgba($color: #000000, $alpha: 0.8);//$color-background-default;
+    //opacity: 0.1;
+    // Z-index
+    z-index: 10000; // Make sure it's on top of everything
+}
+
+.book-modal {
+    border: 2px solid $color-primary-800;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 80%;
+    max-height: 40rem;
+    transform: translate(-50%, -50%);
+    background-color: $book-modal-background-color;
+    box-shadow: $book-modal-box-shadow;
+    border-radius: $book-modal-border-radius;
+    max-width: 600px;
+    z-index: 10000;
+    // Typography Stuff
+    // Misc
+    /* Display Stuff */
+    overflow-x: hidden; // Ensure the card doesn't overflow
+    scroll-behavior: smooth;
+    overflow-y: auto; /* Vertical scrolling */
+    display: flex;
+    flex-direction: column; // Arrange child elements vertically
+
+    &__close-btn {
+        /* Position Stuff */
+        position: absolute;
+        border: 2px solid $color-primary-800;
+        top: $size-2;
+        left: $size-2;
+        height: 3rem;
+        width: 3rem;
+        /* Box Model Stuff */
+        padding: $size-2;
+        border-radius: 3rem;
+        box-shadow: $drop-shadow-neutral;
+        /* Display Stuff */
+
+        z-index: 10000;
+        /* Typography Stuff */
+        font-size: $font-size-600; // Adjust font size
+        background: $color-background-default;
+        svg path {
+            stroke: $color-primary-800;
+        }
+        /* Manipulation Stuff */
+        cursor: pointer; // Change the cursor to a pointer on hover
+        &:hover {
+            border: 2px solid $navigation-color-hover;
+            box-shadow: $drop-shadow-hover;
+            svg path {
+                stroke: $navigation-color-hover;
+            }
+        }
+        /* Misc */
+    }
+
+    &__seperator {
+        /* Position Stuff */
+        /* Box Model Stuff */
+        border: 1px solid $color-neutral-200;
+        border-radius: $border-radius-2;
+        width: 90%;
+        margin-inline: auto;
+        /* Display Stuff */
+        /* Typography Stuff */
+        /* Manipulation Stuff */
+        /* Misc */
+    }
+
+    &__image {
+        /* Position Stuff */
+        position: relative;
+        /* Box Model Stuff */
+        min-height: 300px;
+        /* Display Stuff */
+        /* Typography Stuff */
+        /* Manipulation Stuff */
+        /* Misc */
+        overflow: hidden; // Ensure the image doesn't overflow
+        //min-height: 200px; // Set a minimum height for the image
+        height: min(300px, 50%); // Set a maximum height for the image
+    }
+
+    &__title {
+        display: flex;
+        padding: $size-2;
+        justify-content: center;
+        /* Typography Stuff */
+        font-family: $book-modal-title-font-family;
+        font-size: $book-modal-title-font-size; // Adjust font size
+        font-weight: $book-modal-title-font-weight; // Apply bold font weight
+        color: $book-modal-title-color;
+    }
+
+    &__content {
+        // Position Stuff
+        // Box Model Stuff
+
+        // Display Stuff
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // Typography Stuff
+        // Misc
+        // Apply other styles as needed
+
+        &__item {
+            /* Typography Stuff */
+            font-size: $font-size-500; // Adjust font size
+            display: flex; // Use flexbox for layout
+            gap: $size-2; // Add space between the label and value
+            padding: $size-2 $size-6;
+
+            &__label {
+                /* Position Stuff */
+                /* Box Model Stuff */
+                /* Display Stuff */
+                /* Typography Stuff */
+                font-weight: $book-modal-label-font-weight;
+                font-size: $book-modal-label-font-size; // Adjust font size
+                color: $book-modal-label-color;
+                /* Manipulation Stuff */
+                /* Misc */
+            }
+
+            &__value {
+                /* Position Stuff */
+                /* Box Model Stuff */
+                /* Display Stuff */
+                /* Typography Stuff */
+                font-family: $book-modal-value-font-family;
+                font-weight: $book-modal-value-font-weight;
+                font-size: $book-modal-value-font-size;
+                color: $book-modal-value-color;
+                /* Manipulation Stuff */
+                /* Misc */
+
+                &__author {
+                    /* Position Stuff */
+                    /* Box Model Stuff */
+                    /* Display Stuff */
+                    display: flex; // Use flexbox for layout
+                    flex-direction: column; // Arrange child elements vertically
+                    /* Typography Stuff */
+
+                    /* Manipulation Stuff */
+                    /* Misc */
+                }
+            }
+        }
+    }
+}

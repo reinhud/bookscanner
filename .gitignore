@@ -1,0 +1,14 @@
+**/.pnpm-store
+
+/.pnpm-store
+
+.pnpm-store/** 
+
+.env
+
+./backend/creds/**
+
+**/creds/**
+
+*/creds/**
+

@@ -1,0 +1,15 @@
+@use '../../abstracts' as *;
+
+.bookmarks-page {
+    /* Position Stuff */
+    /* Box Model Stuff */
+
+    /* Display Stuff */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    position: relative;
+    overflow: hidden;
+    /* Typography Stuff */
+    /* Manipulation Stuff */
+    /* Misc */
+}
