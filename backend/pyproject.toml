@@ -11,17 +11,12 @@ python = "3.12.2"
 flask = "^3.0.2"
 flask-cors = "^4.0.0"
 firebase-admin = "^6.5.0"
-pyzbar = "^0.1.9"
 pillow = "^10.2.0"
 fastapi = "^0.110.0"
 uvicorn = {extras = ["standard"], version = "^0.28.0"}
 loguru = "^0.7.2"
 python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 python-multipart = "^0.0.9"
-easyocr = "^1.7.1"
-opencv-python = "^4.9.0.80"
-torch = "^2.2.1"
-pandas = "^2.2.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.1.0"
