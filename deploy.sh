@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Change directory to the project directory in server
+cd ./bookscanner_refactor
+
+# Pull the latest changes from the repository
+git pull origin main
+
+# Bring down existing containers
+docker-compose -f docker-compose.prod.yaml down
+
+# Bring up the containers in detached mode
+docker-compose -f docker-compose.prod.yaml up -d
