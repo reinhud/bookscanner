@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Run SSH commands to pull changes and restart Docker Compose
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER_NAME }}
