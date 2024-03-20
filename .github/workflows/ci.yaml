@@ -1,4 +1,4 @@
-name: CI
+name: 🚀 CI
 
 on:
   push:
@@ -7,25 +7,25 @@ on:
 
 jobs:
   backend:
-    name: Publish Backend Docker image
+    name: 🛠️ Publish Backend Docker image
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: 📥 Check out the repo
         uses: actions/checkout@v2
 
-      - name: Log in to Docker Hub
+      - name: 🔒 Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker - Backend
+      - name: 🏷️ Extract metadata (tags, labels) for Docker - Backend
         id: backend_meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: reinhuddev1/backend
 
-      - name: Build and push Backend Docker image
+      - name: 🛠️ Build and push Backend Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: ./backend
@@ -35,25 +35,25 @@ jobs:
           labels: ${{ steps.backend_meta.outputs.labels }}
 
   frontend:
-    name: Publish Frontend Docker image
+    name: 🎨 Publish Frontend Docker image
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: 📥 Check out the repo
         uses: actions/checkout@v2
 
-      - name: Log in to Docker Hub
+      - name: 🔒 Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker - Frontend
+      - name: 🏷️ Extract metadata (tags, labels) for Docker - Frontend
         id: frontend_meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: reinhuddev1/frontend
 
-      - name: Build and push Frontend Docker image
+      - name: 🎨 Build and push Frontend Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: ./frontend
@@ -61,4 +61,3 @@ jobs:
           push: true
           tags: ${{ steps.frontend_meta.outputs.tags }}
           labels: ${{ steps.frontend_meta.outputs.labels }}
-
