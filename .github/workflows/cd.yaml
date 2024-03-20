@@ -1,13 +1,10 @@
 name: CD
 
 on:
-  push:
-    branches:
-      - main
-  #workflow_run:
-  #  workflows: ["CI"]
-  #  types:
-  #    - completed
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -15,12 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run SSH commands to pull changes and restart Docker Compose
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER_NAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            echo "Hello World"
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+      
+      - name: Run SSH commands with password authentication
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p "${{ secrets.PORT }}" "${{ secrets.USER_NAME }}"@${{ secrets.HOST }} 'cd /bookscanner_refactor && git pull origin main && docker-compose -f docker-compose.prod.yaml down && docker-compose -f docker-compose.prod.yaml up -d'
