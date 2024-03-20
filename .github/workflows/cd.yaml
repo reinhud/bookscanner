@@ -1,4 +1,4 @@
-name: CD
+name: 🚀 CD
 
 on:
   workflow_run:
@@ -8,24 +8,11 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Linode
+    name: 🛠️ Deploy to Linode
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Copy docker-compose.prod.yaml to Linode
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER_NAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.PORT }}
-          source: ./docker-compose.prod.yaml
-          target: /bookscanner/docker-compose.prod.yaml
-
-      - name: SSH into Linode and restart Docker Compose
+      - name: 🚪 SSH into Linode, pull from repository, and restart Docker Compose
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -33,5 +20,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /bookscanner
+            cd /bookscanner_refactor
+            git pull origin main
             docker-compose -f docker-compose.prod.yaml down && docker-compose -f docker-compose.prod.yaml up -d
