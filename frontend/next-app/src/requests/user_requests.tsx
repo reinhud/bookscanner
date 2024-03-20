@@ -47,7 +47,7 @@ export default class UserRequest {
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
-                'Access-Control-Allow-Origin': '*', 
+                //'Access-Control-Allow-Origin': '*', 
                 'Content-Type': 'multipart/form-data'
             },
         };
