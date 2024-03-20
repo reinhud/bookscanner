@@ -2,7 +2,7 @@ name: Deploy Application
 
 on:
   workflow_run:
-    workflows: ["ci.yaml"]
+    workflows: ["CI"]
     types:
       - completed
 
