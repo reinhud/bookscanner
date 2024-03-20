@@ -26,8 +26,7 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            # Print the current working directory
-            pwd
-            
-            # List the files in the current directory
-            ls -la
+            cd bookscanner_refactor
+            git pull origin main
+            docker-compose -f docker-compose.prod.yaml down
+            docker-compose -f docker-compose.prod.yaml up
