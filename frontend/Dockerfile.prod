@@ -11,9 +11,6 @@ ARG NODE_VERSION=21.7.1
 # Uses an official Node.js slim image as the base
 FROM node:${NODE_VERSION}-bookworm-slim AS base
 
-# Specify environment
-ENV NODE_ENV=production
-
 # Declaring the port the app runs on
 ENV PORT=3000
 
@@ -70,6 +67,9 @@ RUN echo "Builder image build successfully"
 #========= Production Image =========#
 #==============================================================================#
 FROM base as prod
+
+# Specify environment
+ENV NODE_ENV=production
 
 # Copy the production dependencies
 COPY --from=prod-deps /frontend/node_modules ./node_modules
