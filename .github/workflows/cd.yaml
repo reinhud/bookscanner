@@ -23,6 +23,8 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            # Execute the deploy.sh script on the server
+            # Change directory to the project directory in server
+            cd ./bookscanner_refactor
+            # Execute the deploy.sh script
             chmod +x ./deploy.sh
             ./deploy.sh

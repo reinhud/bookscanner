@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Change directory to the project directory in server
-cd ./bookscanner_refactor
 
 # Pull the latest changes from the repository
 git pull origin main
