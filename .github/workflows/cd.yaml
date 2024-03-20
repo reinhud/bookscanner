@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /path/to/bookscanner_refactor
+            cd /bookscanner_refactor
             git pull origin main
             docker-compose -f docker-compose.prod.yaml down
-            docker-compose -f docker-compose.prod.yaml up -d
+            docker-compose -f docker-compose.prod.yaml up
