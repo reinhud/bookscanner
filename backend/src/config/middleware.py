@@ -29,6 +29,6 @@ def add_cors_middleware(app: FastAPI) -> None:
         allow_origins=origins,
         allow_credentials=True,  # Allow cookies
         expose_headers="set-cookie",  # Expose cookies to the frontend
-        allow_methods=["GET", "POST"],
+        allow_methods=["*"],
         allow_headers=["*"],
     )

@@ -1,9 +1,6 @@
 name: CD
 
 on:
-  #push:
-  #  branches:
-  #    - main
   workflow_run:
     workflows: ["CI"]
     types:
@@ -17,7 +14,16 @@ jobs:
     steps:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
-      
+
       - name: Run SSH commands with password authentication
-        run: |
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p "${{ secrets.PORT }}" "${{ secrets.USER_NAME }}"@${{ secrets.HOST }} 'cd /bookscanner_refactor && git pull origin main && docker-compose -f docker-compose.prod.yaml down && docker-compose -f docker-compose.prod.yaml up -d'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /path/to/bookscanner_refactor
+            git pull origin main
+            docker-compose -f docker-compose.prod.yaml down
+            docker-compose -f docker-compose.prod.yaml up -d
