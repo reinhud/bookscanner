@@ -4,37 +4,22 @@ services:
 
   frontend-prod:
     container_name: bookscanner-frontend-prod
-
     image: reinhuddev1/frontend:main
-    
     restart: always
-
     environment:
       - NODE_ENV=production
-      
     volumes:
       - .:/workspace:cached
-    
     ports:
-      - ${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}
-
-    expose:
-      - ${FRONTEND_HOST_PORT}
-
+      - "3000:3000"
 
   backend-prod:
     container_name: bookscanner-backend-prod
-
-    # Reference the image on dockerhub pushed by CI workflow
     image: reinhuddev1/backend:main
-
     env_file:
       - ./backend/.env
-    
     restart: always
-      
     volumes:
       - .:/workspace:cached
-
     ports:
-      - 8000:8000
+      - "8000:8000"
