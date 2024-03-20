@@ -5,10 +5,10 @@ from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 
 from src.models.books.books import BookModel
 from src.models.users.users import UserModel
-from src.services.books.book_image_recognition import (
+'''from src.services.books.book_image_recognition import (
     convert_upload_to_numpy,
     extract_text_from_image,
-)
+)'''
 from src.services.books.get_books_from_apis import get_books_by_name
 from src.services.users.auth import get_current_user
 
@@ -53,7 +53,7 @@ async def search_by_name_route(
     return books
 
 
-@book_router.post(
+'''@book_router.post(
     "/search/image",
     name="Books: Search by image",
     status_code=status.HTTP_200_OK,
@@ -105,4 +105,4 @@ async def search_book_by_image_route(
             detail="No books found with the provided query.",
         )
 
-    return books
+    return books'''

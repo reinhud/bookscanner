@@ -4,14 +4,14 @@ import { useAppDispatch } from '@/hooks/state';
 import BookType from '@/types/book_type';
 import { useEffect, useState } from 'react';
 import BookRequest from '../../../requests/book_requests';
-import useAPI from '../api1';
+import useAPI from '../api';
 
 // Define the requests for books
 const bookRequest = new BookRequest();
 
 const useTextSearch = () => {
     // State variables for API response, loading state, form data, and search status
-    const [{ response, loading, error }, setRequestConfig] = useAPI(null, null);
+    const [{ response, isLoading, isError }, setRequestConfig] = useAPI(null, null);
     const [searchTerm, triggerTextSearch] = useState<string>(''); // Renamed from `isbn` to `searchTerm`
 
     const [book, setBook] = useState<BookType | null>(null);
@@ -27,12 +27,12 @@ const useTextSearch = () => {
             if (!searchTerm) return;
 
             // Set request configuration for book search API call
-            setRequestConfig(bookRequest.search_text(searchTerm)); // Adjusted to handle both ISBN and book name
+            setRequestConfig(bookRequest.search_name(searchTerm)); // Adjusted to handle both ISBN and book name
 
-            // Check if response is not null and loading has stopped
-            if (response && !loading) {
+            // Check if response is not null and isLoading has stopped
+            if (response && !isLoading) {
                 // Check if search was successful
-                if (!error && response.status === 200) {
+                if (!isError && response.status === 200) {
                     // Dispatch action to add book to Redux store
                     console.log('Adding book to store:', response.data);
                     setBook(response.data);
@@ -46,10 +46,10 @@ const useTextSearch = () => {
 
         // Call searchBook function
         searchBook();
-    }, [response, loading, error, setRequestConfig, searchTerm, dispatch]);
+    }, [response, isLoading, isError, setRequestConfig, searchTerm, dispatch]);
 
-    // Return book search status and loading state along with function to trigger book search
-    return [{ book, loading }, triggerTextSearch] as const;
+    // Return book search status and isLoading state along with function to trigger book search
+    return [{ book, isLoading }, triggerTextSearch] as const;
 };
 
 // Export the custom hook for text-based book search

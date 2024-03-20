@@ -16,6 +16,7 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'sass')]
     },
     images: {
+        unoptimized: true,
         //domains: ['books.google.com'], // Add books.google.com to allow images from this domain
         remotePatterns: [
             {
@@ -29,7 +30,13 @@ const nextConfig = {
                 hostname: 'books.google.com',
                 port: '',
                 pathname: '/**'
-            }
+            },
+            {
+                protocol: 'https',
+                hostname: '**',
+                port: '',
+                pathname: '**',
+              },
         ]
     }
 };

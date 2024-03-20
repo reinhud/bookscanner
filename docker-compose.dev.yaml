@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+
+  frontend-dev:
+    container_name: bookscanner-frontend-dev
+
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    
+    restart: always
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+    environment:
+      - NODE_ENV=development
+      
+    volumes:
+      - .:/workspace:cached
+    
+    ports:
+      - ${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}
+
+    expose:
+      - ${FRONTEND_HOST_PORT}
+
+
+  backend-dev:
+    container_name: bookscanner-backend-dev
+
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev 
+
+    env_file:
+      - ./backend/.env
+    
+    restart: always
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+      
+    volumes:
+      - .:/workspace:cached
+
+    ports:
+      - 8080:8080

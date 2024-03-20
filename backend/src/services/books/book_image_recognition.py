@@ -1,4 +1,4 @@
-import os
+'''import os
 
 # ===== Set up object detection model ===== #
 import sys
@@ -12,9 +12,9 @@ from easyocr import Reader
 from fastapi import UploadFile
 from PIL import Image
 
-from src.config.logger import logger
+from src.config.logger import logger'''
 
-logger.info(f"{os.getcwd()}")
+'''logger.info(f"{os.getcwd()}")
 logger.info(f"{sys.path}")
 logger.info("Setting up object detection model.")
 # Change the current working directory
@@ -27,9 +27,9 @@ MODEL_PATH = "/workspace/backend/src/services/books/yolo.pt"
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # Set model to evaluation mode
-model.eval()
+model.eval()'''
 
-logger.info("Object detection model loaded.")
+'''logger.info("Object detection model loaded.")
 
 
 # ===== Image recognition functions ===== #
@@ -63,10 +63,10 @@ async def convert_upload_to_numpy(image: UploadFile) -> np.ndarray:
 
     except Exception as e:
         logger.error(f"Error converting uploaded image to NumPy array: {e}")
-        raise e
+        raise e'''
 
 
-def extract_top_confident_per_class(classes: torch.Tensor, predictions: torch.Tensor) -> List[float]:
+'''def extract_top_confident_per_class(classes: torch.Tensor, predictions: torch.Tensor) -> List[float]:
     """
     Extracts the top confident prediction for each class.
 
@@ -99,10 +99,10 @@ def extract_top_confident_per_class(classes: torch.Tensor, predictions: torch.Te
 
     except Exception as e:
         logger.error(f"Error extracting top confident prediction for each class: {e}")
-        raise e
+        raise e'''
 
 
-def crop_and_ocr(img: np.ndarray, bboxes: list) -> List[str]:
+'''def crop_and_ocr(img: np.ndarray, bboxes: list) -> List[str]:
     """
     Open an image using OpenCV, crop according to bounding boxes, display, and OCR each crop.
 
@@ -144,10 +144,10 @@ def crop_and_ocr(img: np.ndarray, bboxes: list) -> List[str]:
 
     except Exception as e:
         logger.error(f"Error performing OCR on the cropped image: {e}")
-        raise e
+        raise e'''
 
 
-def extract_text_from_image(image: np.ndarray) -> str | None:
+'''def extract_text_from_image(image: np.ndarray) -> str | None:
     """
     Extracts text from an image using an object detection model and OCR.
 
@@ -178,4 +178,4 @@ def extract_text_from_image(image: np.ndarray) -> str | None:
     # Flatten extracted text
     flattened_text = ' '.join([item for sublist in extracted_text for item in sublist])"""
 
-    return None
+    return None'''

@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  frontend-prod:
+    container_name: bookscanner-frontend-prod
+
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    
+    restart: always
+
+    environment:
+      - NODE_ENV=production
+      
+    volumes:
+      - .:/workspace:cached
+    
+    ports:
+      - ${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}
+
+    expose:
+      - ${FRONTEND_HOST_PORT}
+
+
+  backend-prod:
+    container_name: bookscanner-backend-prod
+
+
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod 
+
+    env_file:
+      - ./backend/.env
+    
+    restart: always
+      
+    volumes:
+      - .:/workspace:cached
+
+    ports:
+      - 8000:8000

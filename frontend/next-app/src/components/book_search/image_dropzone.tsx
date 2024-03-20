@@ -1,4 +1,3 @@
-import useAPI from '@/hooks/requests/api';
 import { useAppDispatch } from '@/hooks/state';
 import BookRequest from '@/requests/book_requests';
 import { openModal, setBook } from '@/state/bookModalSlice';
@@ -6,18 +5,19 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import UploadIcon from '../../../public/icons/upload_icon';
+import useAPI from '@/hooks/requests/api';
 
 const bookRequest = new BookRequest();
 
 export default function ImageDropzone() {
     const [files, setFiles] = useState<(File & { preview: string })[]>([]);
-    const [{ response, loading, error }, setRequestConfig] = useAPI(null, null);
+    const [{ response, isLoading, isError }, setRequestConfig] = useAPI(null, null);
     // Redux dispatch function
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         // Check if response is successful and not loading
-        if (!loading && response && response.status === 200) {
+        if (!isLoading && response && response.status === 200) {
             // Update global modal state with the book data from the response
             dispatch(setBook(response.data));
             // Open the modal
@@ -25,7 +25,7 @@ export default function ImageDropzone() {
             // Clear image preview after each request
             setFiles([]);
         }
-    }, [response, loading, dispatch]);
+    }, [response, isLoading, dispatch]);
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop: (acceptedFiles) => {
