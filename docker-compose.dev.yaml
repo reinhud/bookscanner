@@ -35,7 +35,7 @@ services:
       dockerfile: Dockerfile.dev 
 
     env_file:
-      - ./backend/.env
+      - ./backend/prod.env
     
     restart: always
 

@@ -17,7 +17,7 @@ services:
     container_name: bookscanner-backend-prod
     image: reinhuddev1/backend:main
     env_file:
-      - ./backend/.env
+      - ./backend/prod.env
     restart: always
     volumes:
       - .:/workspace:cached
