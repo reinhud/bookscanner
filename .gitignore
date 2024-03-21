@@ -4,11 +4,10 @@
 
 .pnpm-store/** 
 
-prod.env
+.env
 
-*.prod.env
 
-**/.prod.env
+**/.env
 
 ./backend/creds/**
 
