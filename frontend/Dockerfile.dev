@@ -66,6 +66,8 @@ COPY /next-app/package.json ./
 # Install all dependencies (will reuse production dependencies)
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
 
+EXPOSE 3000
+
 RUN echo "Development image build successfully"
 
 

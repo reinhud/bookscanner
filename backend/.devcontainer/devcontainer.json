@@ -20,7 +20,7 @@
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
 	// "shutdownAction": "none",
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "python src/main.py",
+	"postCreateCommand": "uvicorn src.main:app --host=0.0.0.0  --reload",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {

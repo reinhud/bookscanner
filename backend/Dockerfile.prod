@@ -92,6 +92,8 @@ RUN ls -l && echo "Files copied successfully"
 
 RUN echo "Production image built successfully"
 
+EXPOSE 8000
+
 # Command to run on startup.
 CMD ["python", "src/main.py"]
 

@@ -82,7 +82,7 @@ COPY ./next-app/public ./public
 COPY ./next-app/package.json ./
 
 # Exposing the port 
-EXPOSE $PORT
+EXPOSE 3000
 
 # Run the app
 CMD ["pnpm", "start"]
