@@ -11,22 +11,33 @@ on:
   #    - completed
 
 jobs:
-  copy_env_files:
-    name: Copy .env files to server junge
+  deploy:
+    name: Deploy to Linode
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    needs: copy_env_files
 
-      # Copy .env files to the server
-      - name: Copy .env files via SCP
-        uses: appleboy/scp-action@v0.1.7
+    steps:
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Run SSH commands with password authentication
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
-          #source: ".prod.env,backend/.prod.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
-          source: "prod.env"
-          target: "/root/bookscanner_refactor"
+          script: |
+            # Change directory to the project directory in server
+            cd bookscanner_refactor
+    
+            # Pull the latest changes from the repository
+            git pull origin main
+
+            # Bring down existing containers
+            docker-compose -f docker-compose.prod.yaml down
+
+            # Bring up the containers in detached mode
+            docker-compose -f docker-compose.prod.yaml up -d
 
   
