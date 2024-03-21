@@ -5,6 +5,7 @@ services:
   frontend-prod:
     container_name: bookscanner-frontend-prod
     image: reinhuddev1/frontend:main
+    pull: always
     restart: always
     environment:
       - NODE_ENV=production
@@ -14,6 +15,7 @@ services:
   backend-prod:
     container_name: bookscanner-backend-prod
     image: reinhuddev1/backend:main
+    pull: always
     env_file:
       - ./backend/prod.env
     restart: always
