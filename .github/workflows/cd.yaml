@@ -27,6 +27,6 @@ jobs:
           port: ${{ secrets.PORT }}
           #source: ".env,backend/.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
           source: ".env"
-          target: "/root/test"
+          target: "/root"
 
   
