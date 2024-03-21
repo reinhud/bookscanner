@@ -41,9 +41,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             # Change directory to the project directory in server
-          cd bookscanner_refactor
-          # Print the files in the directory
-          ls -la
-          # Execute the deploy.sh script
-          chmod +x deploy.sh
-          ./deploy.sh
+            cd bookscanner_refactor
+            # Print the files in the directory
+            ls -la
+            # Execute the deploy.sh script
+            chmod +x deploy.sh
+            ./deploy.sh
