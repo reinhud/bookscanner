@@ -11,6 +11,23 @@ jobs:
     name: Deploy to Linode
     runs-on: ubuntu-latest
 
+     copy_env_files:
+    name: Copy .env files to server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Copy .env files to the server
+      - name: Copy .env files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: ".env,backend/.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
+          target: "~/bookscanner_refactor"
+
     steps:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
