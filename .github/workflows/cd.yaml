@@ -7,11 +7,7 @@ on:
       - completed
 
 jobs:
-  deploy:
-    name: Deploy to Linode
-    runs-on: ubuntu-latest
-
-     copy_env_files:
+  copy_env_files:
     name: Copy .env files to server
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +23,10 @@ jobs:
           port: ${{ secrets.PORT }}
           source: ".env,backend/.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
           target: "~/bookscanner_refactor"
+
+  deploy:
+    name: Deploy to Linode
+    runs-on: ubuntu-latest
 
     steps:
       - name: Install sshpass
