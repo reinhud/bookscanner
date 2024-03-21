@@ -6,6 +6,35 @@ on:
       #- main
       - master
 
+deploy:
+    name: Deploy to Linode
+    runs-on: ubuntu-latest
+    needs: copy_env_files
+
+    steps:
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Run SSH commands with password authentication
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            # Change directory to the project directory in server
+            cd bookscanner_refactor
+    
+            # Pull the latest changes from the repository
+            git pull origin main
+
+            # Bring down existing containers
+            docker-compose -f docker-compose.prod.yaml down
+
+            # Bring up the containers in detached mode
+            docker-compose -f docker-compose.prod.yaml up -d
+
 jobs:
   backend:
     name: 🛠️ Publish Backend Docker image
