@@ -4,7 +4,7 @@
 
 .pnpm-store/** 
 
-.prod.env
+prod.env
 
 *.prod.env
 
