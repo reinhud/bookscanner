@@ -8,8 +8,6 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
-    volumes:
-      - .:/workspace:cached
     ports:
       - "3000:3000"
 
@@ -19,7 +17,5 @@ services:
     env_file:
       - ./backend/prod.env
     restart: always
-    volumes:
-      - .:/workspace:cached
     ports:
       - "8000:8000"
