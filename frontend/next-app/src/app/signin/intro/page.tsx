@@ -26,7 +26,7 @@ export default function Intro() {
             <div className="intro__hero">
                 {/* Display introductory title */}
                 <div className="intro__hero__title">
-                    Find your next read with Bookscanner! 
+                    Find your next read with Bookscanner! Test
                 </div>
                 {/* Display introductory description */}
                 <div className="intro__hero__description">
