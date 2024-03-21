@@ -6,7 +6,7 @@ export default class BookRequest {
      */
 
     // Backend URL for user-related requests
-    NEXT_PUBLIC_BACKEND_URL = `${process.env.BACKEND_IP}:${process.env.BACKEND_HOST_PORT}`;
+    NEXT_PUBLIC_BACKEND_URL = `${process.env.NEXT_PUBLIC_BACKEND_IP}:${process.env.NEXT_PUBLIC_BACKEND_HOST_PORT}`;
     
     // Method to construct search by ISBN or Name request
     search_name = (search_term: string): AxiosRequestConfig => {

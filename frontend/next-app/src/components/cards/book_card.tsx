@@ -23,6 +23,7 @@ export default function BookCard({ book }: { book: BookType }) {
     return (
         <div className="book-card" onClick={handleClick}>
             <div className="book-card__image">
+                {/* Display cover picture */}
                 <Image
                     src={imageUrlToRender}
                     alt="Default Book Cover"
@@ -30,6 +31,7 @@ export default function BookCard({ book }: { book: BookType }) {
                     object-position="50% 50%"
                     fill={true}
                 />
+                
             </div>
             <h1 className="book-card__title">{book.title!}</h1>
             <span className="book-modal__seperator"></span>

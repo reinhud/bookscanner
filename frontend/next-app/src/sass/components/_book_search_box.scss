@@ -9,12 +9,14 @@
     box-shadow: $book-search-box-box-shadow;
     padding: $size-4;
     width: 100%;
+    max-width: 30rem;
 
     /* Display Stuff */
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: $book-modal-box-shadow;
+    gap: $size-4;
 
     @include mq(large) {
         flex-direction: row;
@@ -33,7 +35,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: $size-4;
 
         &__header {
             /* Typography Stuff */
@@ -46,7 +47,7 @@
 
         input {
             /* Box Model Stuff */
-            padding: $size-4;
+            padding: $size-2;
             border-radius: $border-radius-2;
             border: 2px solid #ccc;
 

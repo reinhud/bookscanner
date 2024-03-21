@@ -3,7 +3,7 @@
 .carousel-container {
     /* Position Stuff */
     /* Box Model Stuff */
-    margin: $container-min-margin-inline;
+    //margin: $container-min-margin-inline;
     /* Display Stuff */
     display: flex; // Use flexbox for layout
     flex-direction: column; // Arrange child elements vertically
@@ -13,10 +13,12 @@
     /* Manipulation Stuff */
     /* Misc */
     overflow: hidden; // Ensure the container doesn't overflow
+    width: 100%;
 }
 
 .carousel {
     min-height: 500px;
+
     &__content {
     }
 }
@@ -25,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    //margin: 2rem;
     padding: 0;
     list-style: none;
 

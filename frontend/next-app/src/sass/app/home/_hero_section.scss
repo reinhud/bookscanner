@@ -4,14 +4,12 @@
     /* Position Stuff */
     justify-self: center;
     /* Box Model Stuff */
-    width: clamp(10rem, 100%, 40rem);
+    width: clamp(15rem, 100%, 40rem);
     /* Display Stuff */
     display: flex;
     flex-direction: column;
 
-    border: 2px solid green;
-
-    gap: $size-2;
+    gap: $size-4;
     /* Typography Stuff */
 
     /* Manipulation Stuff */
@@ -23,7 +21,6 @@
     &__welcome {
         /* Position Stuff */
         /* Box Model Stuff */
-        padding: $size-4;
         /* Display Stuff */
         display: flex;
         gap: $size-6;

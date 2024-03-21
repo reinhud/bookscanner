@@ -6,12 +6,13 @@
     justify-self: center;
     margin: $size-4;
     width: 90%;
+    height: 90%;
     border: 2px solid $color-primary-800;
     border-radius: $border-radius-2;
     box-shadow: $box-shadow-neumorphic-neutral;
 
-    max-width: 300px;
-    height: 400px;
+    //max-width: 200px;
+    //height: 300px;
     /* Display Stuff */
     display: flex; // Use flexbox for layout
     flex-direction: column; // Arrange child elements vertically
@@ -42,8 +43,8 @@
         /* Position Stuff */
         position: relative;
         /* Box Model Stuff */
-        min-width: 100px;
-        min-height: 150px;
+        min-width: 5rem;
+        min-height: 10rem;
         /* Display Stuff */
         /* Typography Stuff */
         /* Manipulation Stuff */
@@ -71,7 +72,7 @@
         /* Display Stuff */
         display: flex; // Use flexbox for layout
         flex-direction: column; // Arrange child elements vertically
-        margin: $size-2; // Add padding to the text section
+        //margin: $size-2; // Add padding to the text section
         height: 30%;
 
         &__item {
@@ -86,6 +87,7 @@
                 /* Box Model Stuff */
                 /* Display Stuff */
                 /* Typography Stuff */
+                font-size: $book-card-label-font-size;
                 font-weight: $book-card-label-font-weight; // Apply bold font weight
                 /* Manipulation Stuff */
                 /* Misc */
@@ -96,6 +98,8 @@
                 /* Box Model Stuff */
                 /* Display Stuff */
                 /* Typography Stuff */
+                font-size: $book-card-value-font-size;
+                font-weight: $book-card-value-font-weight; // Apply bold font weight
 
                 /* Manipulation Stuff */
                 /* Misc */

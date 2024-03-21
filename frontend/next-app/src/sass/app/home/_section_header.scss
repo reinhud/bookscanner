@@ -35,7 +35,6 @@
 
         /* Display Stuff */
         display: flex;
-        justify-content: end;
         align-items: center;
         /* Typography Stuff */
         /* Manipulation Stuff */
@@ -48,18 +47,20 @@
                 stroke: $navigation-color-hover; // Change the stroke color of the SVG on hover
             }
         }
+
+        
         /* Misc */
 
         &__text {
             /* Position Stuff */
             /* Box Model Stuff */
-            padding: $size-2;
+            //padding: $size-2;
             /* Display Stuff */
             display: flex;
             justify-content: center;
             align-items: center;
             /* Typography Stuff */
-            font-size: $font-size-600;
+            font-size: $font-size-400;
             color: $color-accent-700;
             /* Manipulation Stuff */
             white-space: nowrap; // Prevent text from wrapping
@@ -75,6 +76,12 @@
             /* Typography Stuff */
             /* Manipulation Stuff */
             /* Misc */
+            display: none; // Hide the icon by default
+            /* Manipulation Stuff */
+            @include mq(large) {
+                display: block; // Show the icon on large screens
+                padding: $size-2;
+            }
 
             svg path {
                 stroke: $navigation-color-active; // Adjust the stroke color when the Link is active

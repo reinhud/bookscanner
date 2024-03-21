@@ -1,4 +1,7 @@
+import SectionHeader from '@/components/header/section_header';
+import BookCarousel from './components/book_carousel';
 import HeroSection from './components/hero_section';
+import HistorySection from './components/history_section';
 
 export default function Home() {
     /**
@@ -12,20 +15,24 @@ export default function Home() {
             {/* Display the hero section */}
             <HeroSection />
 
-            {/* Display section header for recently scanned books <SectionHeader
+            {/* Display section header for recently scanned books */}
+            <SectionHeader
                 title="Recently Scanned"
                 href="/main/search_history"
-            />*/}
+            />
             
 
-            {/* Display history section for recently scanned books <HistorySection />*/}
+            {/* Display history section for recently scanned books */}
+            <HistorySection />
             
             
 
-            {/* Display section header for bookmarks <SectionHeader title="Recommendations" href="/main/recommendations" />*/}
+            {/* Display section header for bookmarks */}
+            <SectionHeader title="Recommendations" href="/main/recommendations" />
             
 
-            {/* Display book carousel with example book data <BookCarousel />*/}
+            {/* Display book carousel with example book data */}
+            <BookCarousel />
             
         </main>
     );

@@ -4,13 +4,13 @@
     /* Position Stuff */
 
     /* Box Model Stuff */
-
-    margin: $size-4;
+    border: 2px solid red;
+    margin: $size-2;
     border-radius: $border-radius-2;
     border: 2px dashed $color-background-default;
-    min-width: 20rem;
+    min-width: 4rem;
     width: 100%;
-    min-height: 20rem;
+    min-height: 4rem;
     /* Display Stuff */
     justify-content: center;
     overflow: hidden;
@@ -56,13 +56,13 @@
         /* Typography Stuff */
         /* Manipulation Stuff */
         /* Misc */
-        font-size: $font-size-400;
+        font-size: $font-size-300;
         color: $color-neutral-500;
 
         &__icon {
             /* Position Stuff */
             /* Box Model Stuff */
-            max-width: $size-16;
+            max-width: $size-14;
             /* Display Stuff */
             /* Typography Stuff */
             /* Manipulation Stuff */
@@ -74,7 +74,7 @@
             /* Box Model Stuff */
             /* Display Stuff */
             /* Typography Stuff */
-            font-size: $font-size-700;
+            font-size: $font-size-400;
             /* Manipulation Stuff */
             /* Misc */
         }
