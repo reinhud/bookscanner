@@ -1,0 +1,10 @@
+2024-03-21 16:27:08.439 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 16:29:10.261 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 16:30:54.997 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 16:58:02.291 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 16:59:05.545 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 16:59:22.130 | INFO     | src.services.users.auth:authenticate_user:173 - User login attempt: 'Lukas'
+2024-03-21 16:59:22.597 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 16:59:22.653 | INFO     | src.services.users.auth:authenticate_user:188 - User authenticated: 'Lukas'
+2024-03-21 16:59:52.641 | INFO     | __main__:<module>:35 - Starting the application
+2024-03-21 17:04:18.265 | INFO     | __main__:<module>:35 - Starting the application

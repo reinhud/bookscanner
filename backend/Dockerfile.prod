@@ -91,16 +91,11 @@ COPY . .
 RUN ls -l && echo "Files copied successfully"
 
 
-# Create a non-root user.
-#RUN useradd -m appuser
+# Load port from env
+ENV BACKEND_HOST_PORT=${BACKEND_HOST_PORT}
 
-# Change ownership of the working directory to the non-root user.
-#RUN chown -R appuser:appuser /workspace
-
-# Change to the non-root user.
-#USER appuser
-
-EXPOSE 8000
+# Expose the port
+EXPOSE $BACKEND_HOST_PORT
 
 RUN echo "Production image built successfully"
 

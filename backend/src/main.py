@@ -33,6 +33,9 @@ async def root():
 
 if __name__ == "__main__":
     logger.info("Starting the application")
-    logger.info(os.getcwd())
-    logger.info(os.listdir())
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(
+        "main:app",
+        host=os.getenv("BACKEND_IP"),
+        port=int(os.getenv("BACKEND_HOST_PORT")),
+        log_level="info"
+    )

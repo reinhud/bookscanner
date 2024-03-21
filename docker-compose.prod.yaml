@@ -5,17 +5,22 @@ services:
   frontend-prod:
     container_name: bookscanner-frontend-prod
     image: reinhuddev1/frontend:main
+    env_file:
+      - .env
     restart: always
     environment:
       - NODE_ENV=production
     ports:
-      - "${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}"
+      - ${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}
 
   backend-prod:
     container_name: bookscanner-backend-prod
     image: reinhuddev1/backend:main
     env_file:
-      - ./backend/prod.env
+      - ./backend/.prod.env
+      - .env
+    args:
+        - PORT=${BACKEND_CONTAINER_PORT}
     restart: always
     ports:
-      - "${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}"
+      - ${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}

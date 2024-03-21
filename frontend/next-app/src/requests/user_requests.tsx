@@ -8,7 +8,8 @@ export default class UserRequest {
      */
 
     // Backend URL for user-related requests
-    NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    //NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    NEXT_PUBLIC_BACKEND_URL = `${process.env.BACKEND_IP}:${process.env.BACKEND_HOST_PORT}`;
 
     // Method to construct sign-up request
     signup = (user: UserSignUpType): AxiosRequestConfig => {

@@ -9,6 +9,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.dev
     
+    env_file:
+      - .sample.env
+    
     restart: always
 
     # Overrides default command so things don't shut down after the process ends.
@@ -21,10 +24,10 @@ services:
       - .:/workspace:cached
     
     ports:
-      - ${FRONTEND_HOST_PORT}:${FRONTEND_CONTAINER_PORT}
+      - "3000:3000"
 
     expose:
-      - ${FRONTEND_HOST_PORT}
+      - 3000
 
 
   backend-dev:
@@ -35,7 +38,8 @@ services:
       dockerfile: Dockerfile.dev 
 
     env_file:
-      - ./backend/prod.env
+      - ./backend/.prod.env  # because still need credentials for database, google books api, etc., #TODO: change to own env file
+      - .sample.env
     
     restart: always
 
@@ -46,4 +50,7 @@ services:
       - .:/workspace:cached
 
     ports:
-      - "${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}"
+      - "8000:8000"
+
+    expose:
+      - 8000
