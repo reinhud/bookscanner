@@ -17,3 +17,114 @@
 2024-03-21 20:22:24.295 | INFO     | src.services.users.auth:authenticate_user:173 - User login attempt: 'Lukas'
 2024-03-21 20:22:24.807 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
 2024-03-21 20:22:24.864 | INFO     | src.services.users.auth:authenticate_user:188 - User authenticated: 'Lukas'
+2024-03-21 20:25:54.391 | INFO     | src.services.users.auth:authenticate_user:173 - User login attempt: 'Lukas'
+2024-03-21 20:25:54.967 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:55.023 | INFO     | src.services.users.auth:authenticate_user:188 - User authenticated: 'Lukas'
+2024-03-21 20:25:55.843 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:55.862 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:25:56.303 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:56.309 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:25:56.309 | INFO     | src.api.routes.users:get_search_history:56 - Retrieving search history for user: Lukas
+2024-03-21 20:25:56.528 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:56.534 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.534 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.534 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.534 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.534 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.535 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:25:56.727 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:56.733 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:25:56.920 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:25:56.927 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:25:56.927 | INFO     | src.api.routes.users:get_recommendations:104 - Retrieving book recommendations for user: Lukas
+2024-03-21 20:26:48.946 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:26:48.952 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:26:48.952 | INFO     | src.api.routes.users:get_search_history:56 - Retrieving search history for user: Lukas
+2024-03-21 20:26:49.165 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.171 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.172 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:26:49.341 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:26:49.347 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:26:49.347 | INFO     | src.api.routes.users:get_recommendations:104 - Retrieving book recommendations for user: Lukas
+2024-03-21 20:26:49.549 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:26:49.554 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:26:49.850 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:26:49.856 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:29.098 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:29.104 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:29.104 | INFO     | src.api.routes.users:get_search_history:56 - Retrieving search history for user: Lukas
+2024-03-21 20:28:29.320 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:29.326 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.326 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.326 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.327 | ERROR    | src.api.routes.users:get_search_history:72 - Failed to retrieve most relevant book with error: 0
+2024-03-21 20:28:29.581 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:29.587 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:29.587 | INFO     | src.api.routes.users:get_recommendations:104 - Retrieving book recommendations for user: Lukas
+2024-03-21 20:28:29.830 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:29.835 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:30.068 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:30.073 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:59.088 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:59.094 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:28:59.354 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:28:59.360 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:18.855 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:18.861 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:19.094 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:19.100 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:30.829 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:30.835 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:31.078 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:31.084 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:46.719 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:46.725 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:29:46.949 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:29:46.956 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:30:40.383 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:30:40.389 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:30:40.575 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:30:40.581 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:31:49.169 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:31:49.175 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'
+2024-03-21 20:31:49.353 | INFO     | src.api.dependancies.firebase:firebase_get:58 - Retrieving document: 'Lukas' from collection: 'users'
+2024-03-21 20:31:49.359 | INFO     | src.services.users.auth:get_current_user:319 - User validated: 'Lukas'

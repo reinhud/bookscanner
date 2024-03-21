@@ -1,6 +1,5 @@
 'use client';
 
-import BookSearchBox from '@/components/book_search/book_search_box';
 import useAPI from '@/hooks/requests/api';
 import UserRequest from '@/requests/user_requests';
 import { UserType } from '@/types/user_type';
@@ -65,10 +64,10 @@ export default function HeroSection() {
                     )}
                 </div>
             </div>
-            {/* Display the book search box */}
-            <h1 className="hero-section__search-box">
+            {/* Display the book search box <h1 className="hero-section__search-box">
                 <BookSearchBox /> 
-            </h1>
+            </h1>*/}
+            
         </div>
     );
 }

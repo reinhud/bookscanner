@@ -35,7 +35,7 @@ if __name__ == "__main__":
     logger.info("Starting the application")
     uvicorn.run(
         "main:app",
-        host=os.getenv("BACKEND_IP"),
-        port=int(os.getenv("BACKEND_HOST_PORT")),
+        host="http://172.104.241.247",
+        port=8000,
         log_level="info"
     )
