@@ -6,6 +6,10 @@
 
 .prod.env
 
+*.prod.env
+
+**/.prod.env
+
 ./backend/creds/**
 
 **/creds/**
