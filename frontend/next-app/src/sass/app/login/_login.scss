@@ -1,10 +1,21 @@
 @use '../../abstracts' as *;
 
+.error-message {
+    /* Box Model Stuff */
+    /* Typography Stuff */
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    color: $error-color;
+}
+
 .login {
     /* Position Stuff */
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
     /* Box Model Stuff */
-    height: 100vh;
-    padding: $size-18 0;
     /* Display Stuff */
     display: flex;
     flex-direction: column;
@@ -92,6 +103,7 @@
                 width: 100%;
 
                 /* Display Stuff */
+                text-align: center;
                 display: flex;
                 justify-content: center;
 

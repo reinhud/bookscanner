@@ -7,7 +7,6 @@ body {
     /* Position Stuff */
     position: relative;
     /* Box Model Stuff */
-    border: 1px solid green;
     background-color: $body-background-color;
     margin: 0 auto; /* Center the container horizontally */
     /* Display Stuff */
@@ -30,7 +29,7 @@ body {
     @include mq(medium) {
         --padding: #{$container-min-margin-inline} * 2;
         --max-width: #{$container-max-width};
-        //box-shadow: $box-shadow-neumorphic-neutral;
+        box-shadow: $box-shadow-neumorphic-neutral;
         border-radius: $border-radius-2;
         width: min(100% - var(--padding), var(--max-width));
     }

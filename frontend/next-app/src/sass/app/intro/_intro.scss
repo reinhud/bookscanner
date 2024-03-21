@@ -2,26 +2,33 @@
 
 .intro {
     /* Position Stuff */
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
     /* Box Model Stuff */
-    height: 100%;
-    padding: $size-8 0;
+    //justify-self: center;
+    //padding: minmax($size-2, 10%) 0;
     /* Display Stuff */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow:hidden;
 
     &__picture {
         /* Box Model Stuff */
-        padding: $size-3 0;
-
+        position: relative;
         /* Display Stuff */
         display: flex;
+        min-height: $size-15;
+        min-width: $size-15;
     }
 
     &__hero {
         /* Box Model Stuff */
-        padding: $size-4 0;
-        width: 60%;
+        max-width: 30rem;
         /* Display Stuff */
         display: flex;
         flex-direction: column;
@@ -30,6 +37,7 @@
         text-align: center;
         &__title {
             /* Box Model Stuff */
+            padding: $size-2 0;
             /* Typography Stuff */
             font-size: $header-2-font-size;
             font-weight: $header-font-weight;
@@ -39,7 +47,8 @@
         }
         &__description {
             /* Box Model Stuff */
-            width: 80%;
+            width: 100%;
+            padding-bottom: $size-4;
             /* Typography Stuff */
             font-size: $body-font-size;
             font-weight: $body-font-weight;
@@ -54,10 +63,11 @@
         justify-content: center;
         align-items: center;
         /* Box Model Stuff */
-        margin-top: $size-10;
+        margin-top: minmax($size-2, 10%);
 
         a {
             /* Box Model Stuff */
+            
             padding: $size-1;
             border-radius: $border-radius-2;
             margin-bottom: $size-1;

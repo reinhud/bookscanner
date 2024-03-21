@@ -2,9 +2,12 @@
 
 .signup {
     /* Position Stuff */
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
     /* Box Model Stuff */
-    height: 100vh;
-    padding: $size-18 0;
     /* Display Stuff */
     display: flex;
     flex-direction: column;
@@ -86,6 +89,7 @@
                 /* Display Stuff */
                 display: flex;
                 justify-content: center;
+                text-align: center;
 
                 /* Typography Stuff */
                 font-family: $body-font-family;

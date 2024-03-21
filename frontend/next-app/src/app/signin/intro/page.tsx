@@ -16,22 +16,27 @@ export default function Intro() {
     const router = useRouter();
 
     return (
-        <div className="intro">
+        <main className="intro">
             {/* Display introductory image */}
             <div className="intro__picture">
-                <Image src={BookPic1} alt="BookPic1" />
+                <Image 
+                    src={BookPic1} 
+                    alt="BookPic1" 
+                    objectFit="fill"
+                    objectPosition="50% 50%"
+                    fill={true}
+                />
             </div>
 
             {/* Display introductory hero content */}
             <div className="intro__hero">
                 {/* Display introductory title */}
                 <div className="intro__hero__title">
-                    Find your next read with Bookscanner! Test
+                    Find your next read with Bookscanner!
                 </div>
                 {/* Display introductory description */}
                 <div className="intro__hero__description">
-                    We help you get more out of your next trip to the bookstore
-                    and bring the info you need into your hands.
+                    We help you get more out of your next trip to the bookstore.
                 </div>
             </div>
 
@@ -46,6 +51,6 @@ export default function Intro() {
                 {/* Render link to Login page */}
                 <Link href="/signin/login">Already have an Account?</Link>
             </div>
-        </div>
+        </main>
     );
 }

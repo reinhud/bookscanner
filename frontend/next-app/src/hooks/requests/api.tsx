@@ -102,7 +102,7 @@ const useAPI = (
             dispatch({ type: 'FETCH_FAILURE', payload: 'Request error' });
         } else {
             // Dispatch FETCH_FAILURE action for general error
-            dispatch({ type: 'FETCH_FAILURE', payload: 'General error' });
+            dispatch({ type: 'FETCH_FAILURE', payload: 'Server Error' });
         }
         console.log(error.config);
     };

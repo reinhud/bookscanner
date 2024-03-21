@@ -57,7 +57,7 @@ export default function LogIn() {
                     type="text"
                     placeholder="Username"
                 />
-                {errors.username && <span>{errors.username.message}</span>}
+                {errors.username && <span className="error-message">{errors.username.message}</span>}
                 <input
                     {...register('password', {
                         required: 'Password is required',
@@ -66,8 +66,8 @@ export default function LogIn() {
                     type="password"
                     placeholder="Password"
                 />
-                {errors.password && <span>{errors.password.message}</span>}
-                {serverErrorMessage && <span>{serverErrorMessage}</span>}
+                {errors.password && <span className="error-message">{errors.password.message}</span>}
+                {serverErrorMessage && <span className="error-message">{serverErrorMessage}</span>}
                 <div className="login__form__buttons">
                     <ActionButton text="Log In" type="submit" onClick={handleSubmit(onSubmit)} />
                     <Link href="/signin/signup">Don&apos;t have an account yet?</Link>
