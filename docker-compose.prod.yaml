@@ -17,7 +17,7 @@ services:
     container_name: bookscanner-backend-prod
     image: reinhuddev1/backend:main
     env_file:
-      - ./backend/.prod.env
+      - ./backend/.env
       - .env
     args:
         - PORT=${BACKEND_CONTAINER_PORT}

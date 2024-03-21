@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile.dev 
 
     env_file:
-      - ./backend/.prod.env  # because still need credentials for database, google books api, etc., #TODO: change to own env file
+      - ./backend/.env  # credentials for database, google books api, etc., #TODO: change to own env file
       - .sample.env
     
     restart: always
