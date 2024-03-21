@@ -90,13 +90,6 @@ COPY . .
 # Verify that files were copied correctly
 RUN ls -l && echo "Files copied successfully"
 
-
-# Load port from env
-ENV BACKEND_HOST_PORT=${BACKEND_HOST_PORT}
-
-# Expose the port
-EXPOSE $BACKEND_HOST_PORT
-
 RUN echo "Production image built successfully"
 
 # Command to run on startup.

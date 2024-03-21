@@ -19,8 +19,6 @@ services:
     env_file:
       - ./backend/.env
       - .env
-    args:
-        - PORT=${BACKEND_CONTAINER_PORT}
     restart: always
     ports:
       - ${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}
