@@ -20,7 +20,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `${this.NEXT_PUBLIC_BACKEND_URL}/register`,
+            url: `http://172.104.241.247:8000/register`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
@@ -44,7 +44,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `${this.NEXT_PUBLIC_BACKEND_URL}/login`,
+            url: `http://172.104.241.247:8000/login`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
