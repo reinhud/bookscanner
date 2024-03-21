@@ -8,14 +8,14 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Linode
+    name: 🛳️ Deploy to Linode
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install sshpass
+      - name: 🛠️ Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Run SSH commands with password authentication
+      - name: 🚪 Run SSH commands with password authentication 🗝️
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
@@ -37,5 +37,3 @@ jobs:
 
             # Bring up the containers in detached mode
             docker-compose -f docker-compose.prod.yaml up -d
-
-  
