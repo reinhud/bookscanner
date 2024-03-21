@@ -27,6 +27,6 @@ jobs:
           port: ${{ secrets.PORT }}
           #source: ".prod.env,backend/.prod.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
           source: "testtest.txt"
-          target: "~/bookscanner_refactor"
+          target: "/root/bookscanner_refactor"
 
   
