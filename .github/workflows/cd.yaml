@@ -18,8 +18,8 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           source: ".env,backend/.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
           target: "~/bookscanner_refactor"
