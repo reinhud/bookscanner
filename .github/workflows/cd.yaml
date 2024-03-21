@@ -12,7 +12,7 @@ on:
 
 jobs:
   copy_env_files:
-    name: Copy .env files to server
+    name: Copy .env files to server junge
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
