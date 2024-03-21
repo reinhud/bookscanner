@@ -1,7 +1,7 @@
 from src.config.tags_metadata import tags_metadata
 
 description = """
-Bookscanner📚 API helps you find books easily.
+Bookscanner📚 API helps you find books easily!
 
 
 Welcome to the Bookscanner API, your go-to solution for easily finding books. 
