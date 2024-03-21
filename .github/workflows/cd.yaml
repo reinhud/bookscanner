@@ -32,6 +32,9 @@ jobs:
             # Bring down existing containers
             docker-compose -f docker-compose.prod.yaml down
 
+            # Get newest images from Docker Hub
+            docker-compose -f docker-compose.prod.yaml pull
+
             # Bring up the containers in detached mode
             docker-compose -f docker-compose.prod.yaml up -d
 
