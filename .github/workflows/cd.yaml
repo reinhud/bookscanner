@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           #source: ".env,backend/.env,frontend/next-app/.env.production,frontend/next-app/.env.development"
-          source: "depl0y.sh"
+          source: "deploy.sh"
           target: "/root/test"
 
   
