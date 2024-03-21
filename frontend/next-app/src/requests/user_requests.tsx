@@ -8,8 +8,7 @@ export default class UserRequest {
      */
 
     // Backend URL for user-related requests
-    NEXT_PUBLIC_BACKEND_URL = "http://172.104.241.247:8000";
-    //const NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    NEXT_PUBLIC_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
     // Method to construct sign-up request
     signup = (user: UserSignUpType): AxiosRequestConfig => {
@@ -20,7 +19,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `http://172.104.241.247:8000/register`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/register`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {
@@ -44,7 +43,7 @@ export default class UserRequest {
         // Construct the request object
         const request = {
             method: 'post',
-            url: `http://172.104.241.247:8000/login`,
+            url: `${this.NEXT_PUBLIC_BACKEND_URL}/login`,
             data: form_data, // Use 'data' instead of 'body' for Axios
             withCredentials: true,
             headers: {

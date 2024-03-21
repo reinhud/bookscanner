@@ -46,4 +46,4 @@ services:
       - .:/workspace:cached
 
     ports:
-      - 8080:8080
+      - "${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}"
