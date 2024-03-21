@@ -6,7 +6,7 @@ import os
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    f"http://172.104.241.247:3000",
+    "http://172.104.241.247:3000",
     f"{os.getenv("FRONTEND_IP")}:{os.getenv("FRONTEND_HOST_PORT")}",
 ]
 
