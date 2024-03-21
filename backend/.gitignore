@@ -1,4 +1,4 @@
-**/.prod.env
+.prod.env
 
 ./logs/** hars
 
