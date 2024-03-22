@@ -44,7 +44,7 @@ RUN apt-get update && \
     build-essential \
     #python3-opencv \
     # required for pyzbar
-    #libzbar0 \  
+    #libzbar0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME.
@@ -85,7 +85,7 @@ ENV ENVIRONMENT="production"
 COPY --from=deps $VIRTUAL_ENV $VIRTUAL_ENV
 
 # Copy project files.
-COPY . . 
+COPY . .
 
 # Verify that files were copied correctly
 RUN ls -l && echo "Files copied successfully"
@@ -96,5 +96,3 @@ EXPOSE 8000
 
 # Command to run on startup.
 CMD ["python", "src/main.py"]
-
-

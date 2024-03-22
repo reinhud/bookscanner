@@ -1,69 +1,68 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 .account-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $size-4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $size-4;
 
-    &__user-info {
-        padding: $size-8;
-        text-align: center;
-        box-shadow: $login-modal-box-shadow;
-        border-radius: $login-modal-border-radius;
-        border: 2px solid $color-primary-800;
+  &__user-info {
+    padding: $size-8;
+    text-align: center;
+    box-shadow: $login-modal-box-shadow;
+    border-radius: $login-modal-border-radius;
+    border: 2px solid $color-primary-800;
 
-        &__pic {
-            width: 10rem; /* Adjust the width as needed */
-            height: 10rem; /* Adjust the height as needed */
-            border-radius: 50%; /* Make the image round */
-            position: relative; /* Ensure the image stays within the rounded border */
-            overflow: hidden; /* Ensure the image stays within the rounded border */
-            padding: $size-4;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Ensure the image covers the entire space */
-            }
-        }
-
-        h2 {
-            font-size: $header-2-font-size;
-            color: $header-2-color;
-            margin-top: $size-4;
-            font-family: $font-family-accent;
-
-        }
-    }
-
-    &__logout-button {
-        padding: 10px 20px;
-        background-color: #FF6347; /* Adjust the color as needed */
-        color: #fff; /* Text color */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: #D64937; /* Adjust the hover color as needed */
-        }
-    }
-
-    &__app-info {
-        padding-top: $size-8;
-        text-align: start;
+    &__pic {
+      width: 10rem; /* Adjust the width as needed */
+      height: 10rem; /* Adjust the height as needed */
+      border-radius: 50%; /* Make the image round */
+      position: relative; /* Ensure the image stays within the rounded border */
+      overflow: hidden; /* Ensure the image stays within the rounded border */
+      padding: $size-4;
+      img {
         width: 100%;
-
-        h2 {
-            font-size: $font-size-500;
-            font-weight: $header-font-weight;
-        }
-
-        p {
-            padding-top: $size-4;
-            font-size: 1rem;
-            font-style: italic;
-        }
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire space */
+      }
     }
+
+    h2 {
+      font-size: $header-2-font-size;
+      color: $header-2-color;
+      margin-top: $size-4;
+      font-family: $font-family-accent;
+    }
+  }
+
+  &__logout-button {
+    padding: 10px 20px;
+    background-color: #ff6347; /* Adjust the color as needed */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #d64937; /* Adjust the hover color as needed */
+    }
+  }
+
+  &__app-info {
+    padding-top: $size-8;
+    text-align: start;
+    width: 100%;
+
+    h2 {
+      font-size: $font-size-500;
+      font-weight: $header-font-weight;
+    }
+
+    p {
+      padding-top: $size-4;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
 }

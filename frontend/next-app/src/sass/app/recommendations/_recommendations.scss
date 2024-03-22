@@ -1,15 +1,15 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 .recommendations-page {
-    /* Position Stuff */
-    /* Box Model Stuff */
+  /* Position Stuff */
+  /* Box Model Stuff */
 
-    /* Display Stuff */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    position: relative;
-    overflow: hidden;
-    /* Typography Stuff */
-    /* Manipulation Stuff */
-    /* Misc */
+  /* Display Stuff */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  position: relative;
+  overflow: hidden;
+  /* Typography Stuff */
+  /* Manipulation Stuff */
+  /* Misc */
 }

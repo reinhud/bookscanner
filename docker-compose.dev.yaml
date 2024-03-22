@@ -1,14 +1,13 @@
-version: '3'
+version: "3"
 
 services:
-
   frontend-dev:
     container_name: bookscanner-frontend-dev
 
     build:
       context: ./frontend
       dockerfile: Dockerfile.dev
-    
+
     restart: always
 
     # Overrides default command so things don't shut down after the process ends.
@@ -16,32 +15,31 @@ services:
 
     environment:
       - NODE_ENV=development
-      
+
     volumes:
       - .:/workspace:cached
-    
+
     ports:
       - "3000:3000"
 
     expose:
       - 3000
 
-
   backend-dev:
     container_name: bookscanner-backend-dev
 
     build:
       context: ./backend
-      dockerfile: Dockerfile.dev 
+      dockerfile: Dockerfile.dev
 
     env_file:
-      - ./backend/.env  # credentials for database, google books api, etc., #TODO: change to own env file
-    
+      - ./backend/.env # credentials for database, google books api, etc., #TODO: change to own env file
+
     restart: always
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
-      
+
     volumes:
       - .:/workspace:cached
 

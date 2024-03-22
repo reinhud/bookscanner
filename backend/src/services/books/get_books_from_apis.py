@@ -3,16 +3,14 @@ from typing import List
 
 from google.cloud.firestore import ArrayUnion
 
-from src.api.dependancies.firebase import firebase_get, firebase_set, firebase_update
-from src.api.dependancies.google_books import search_google_books
-from src.api.dependancies.open_library import search_open_library
+from src.api.dependencies.firebase import firebase_get, firebase_set, firebase_update
+from src.api.dependencies.google_books import search_google_books
+from src.api.dependencies.open_library import search_open_library
 from src.models.books.books import BookModel
 
 
 async def get_books_by_name(query: str, username: str) -> List[BookModel] | None:
-    """
-    Get books from the Google Books and Open Library APIs as well as
-    searching in the cache.
+    """Get books from the Google Books and Open Library APIs as well as searching in the cache.
 
     Parameters
     ----------

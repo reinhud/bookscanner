@@ -1,13 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import os
 
 # Allow requests to the backend from these origins
 origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://172.104.241.247:3000",
-    f"{os.getenv("FRONTEND_IP")}:{os.getenv("FRONTEND_HOST_PORT")}",
 ]
 
 

@@ -2,7 +2,7 @@ from typing import Annotated, List
 
 from fastapi import APIRouter, Depends, HTTPException, status
 
-from src.api.dependancies.firebase import firebase_get
+from src.api.dependencies.firebase import firebase_get
 from src.config.logger import logger
 from src.mocks.mock_recommendations import mock_recommendations
 from src.models.books.books import BookModel
@@ -14,8 +14,7 @@ user_router = APIRouter()
 
 @user_router.get("/users/me/", name="Users: Me", status_code=status.HTTP_200_OK, response_model=UserModel)
 async def read_users_me(current_user: Annotated[UserModel, Depends(get_current_user)]):
-    """
-    Get the current user.
+    """Get the current user.
 
     Parameters
     ----------
@@ -26,7 +25,6 @@ async def read_users_me(current_user: Annotated[UserModel, Depends(get_current_u
     -------
     *UserModel* \\
         - Current user data (status code 200).
-
     """
     return current_user
 
@@ -39,9 +37,8 @@ async def read_users_me(current_user: Annotated[UserModel, Depends(get_current_u
 async def get_search_history(
     current_user: UserModel = Depends(get_current_user),
 ) -> List[BookModel]:
-    """
-    Get the search history for the current user.
-    This will include the most relevant book from the individual search.
+    """Get the search history for the current user. This will include the most relevant book from
+    the individual search.
 
     Parameters
     ----------
@@ -88,8 +85,7 @@ async def get_search_history(
 async def get_recommendations(
     current_user: UserModel = Depends(get_current_user),
 ) -> List[BookModel]:
-    """
-    Get book recommendations for the current user.
+    """Get book recommendations for the current user.
 
     Parameters
     ----------

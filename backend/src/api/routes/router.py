@@ -2,6 +2,7 @@
 
 Import and add all endpoint routers here.
 """
+
 from fastapi import APIRouter
 
 from src.api.routes.auth import auth_router

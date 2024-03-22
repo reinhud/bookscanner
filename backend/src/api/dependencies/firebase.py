@@ -31,8 +31,7 @@ def provide_db():
 
 # ========== Firestore Functions ========== #
 def firebase_get(collection: str, document: str) -> dict | None:
-    """
-    Retrieves a document from a Firestore collection.
+    """Retrieves a document from a Firestore collection.
 
     Parameters
     ----------
@@ -46,7 +45,6 @@ def firebase_get(collection: str, document: str) -> dict | None:
         -------
         dict | None
         The document data if it exists, otherwise None.
-
     """
     try:
         # Get a document from a collection
@@ -71,8 +69,7 @@ def firebase_get(collection: str, document: str) -> dict | None:
 
 
 def firebase_set(collection: str, document: str, data: dict | List) -> None:
-    """
-    Sets a document in a Firestore collection.
+    """Sets a document in a Firestore collection.
 
     Parameters
     ----------
@@ -100,8 +97,7 @@ def firebase_set(collection: str, document: str, data: dict | List) -> None:
 
 
 def firebase_update(collection: str, document: str, data: dict) -> None:
-    """
-    Updates a document in a Firestore collection.
+    """Updates a document in a Firestore collection.
 
     Parameters
     ----------

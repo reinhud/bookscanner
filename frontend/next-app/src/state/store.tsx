@@ -1,13 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { bookModalReducer } from './bookModalSlice';
-import { userReducer } from './userSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { bookModalReducer } from "./bookModalSlice";
+import { userReducer } from "./userSlice";
 
 // Create and configure the Redux store
 export const store = configureStore({
-    reducer: {
-        user: userReducer, // Assigning the user reducer to the 'user' slice of the store
-        bookModal: bookModalReducer // Assigning the modal reducer to the 'modal' slice of the store
-    }
+  reducer: {
+    user: userReducer, // Assigning the user reducer to the 'user' slice of the store
+    bookModal: bookModalReducer, // Assigning the modal reducer to the 'modal' slice of the store
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -1,109 +1,109 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 .signup {
-    /* Position Stuff */
-    position: fixed;
-    top: 10%;
-    bottom: 10%;
-    left: 10%;
-    right: 10%;
+  /* Position Stuff */
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  /* Box Model Stuff */
+  /* Display Stuff */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__hero {
     /* Box Model Stuff */
+    padding: $size-4 0;
     /* Display Stuff */
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: $size-2;
+    text-align: center;
+    &__title {
+      /* Typography Stuff */
+      font-size: $header-2-font-size;
+      font-weight: $header-font-weight;
+      letter-spacing: $header-letter-spacing;
+      line-height: $header-line-height;
+      font-family: $header-font-family;
+    }
+    &__description {
+      /* Typography Stuff */
+      font-size: $body-font-size;
+      font-weight: $body-font-weight;
+      line-height: $body-line-height;
+    }
+  }
 
-    &__hero {
+  &__form {
+    /* Box Model Stuff */
+    width: 60%;
+    padding-top: $size-8;
+
+    /* Display Stuff */
+    display: flex;
+    flex-direction: column;
+    gap: $size-2;
+
+    input {
+      /* Box Model Stuff */
+      padding: $size-2;
+      border-radius: $border-radius-2;
+      border: 2px solid #ccc;
+
+      /* Typography Stuff */
+      font-family: $body-font-family;
+      font-size: $body-font-size;
+      font-weight: $body-font-weight;
+
+      /* Interaction Stuff */
+      &.error {
+        border-color: $error-color;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary-700; // Adjust focus style
+      }
+    }
+
+    &__buttons {
+      /* Display Stuff */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* Box Model Stuff */
+      margin-top: $size-10;
+
+      a {
         /* Box Model Stuff */
-        padding: $size-4 0;
+        padding: $size-1;
+        border-radius: $border-radius-2;
+        margin-bottom: $size-1;
+        width: 100%;
+
         /* Display Stuff */
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: $size-2;
+        justify-content: center;
         text-align: center;
-        &__title {
-            /* Typography Stuff */
-            font-size: $header-2-font-size;
-            font-weight: $header-font-weight;
-            letter-spacing: $header-letter-spacing;
-            line-height: $header-line-height;
-            font-family: $header-font-family;
+
+        /* Typography Stuff */
+        font-family: $body-font-family;
+        font-size: $body-font-size;
+        font-weight: $body-font-weight;
+        text-decoration: none;
+        color: $color-text-default;
+
+        /* Manipulation Stuff */
+        &:hover {
+          color: $color-primary-700;
+          text-decoration: underline;
         }
-        &__description {
-            /* Typography Stuff */
-            font-size: $body-font-size;
-            font-weight: $body-font-weight;
-            line-height: $body-line-height;
-        }
+      }
     }
-
-    &__form {
-        /* Box Model Stuff */
-        width: 60%;
-        padding-top: $size-8;
-
-        /* Display Stuff */
-        display: flex;
-        flex-direction: column;
-        gap: $size-2;
-
-        input {
-            /* Box Model Stuff */
-            padding: $size-2;
-            border-radius: $border-radius-2;
-            border: 2px solid #ccc;
-
-            /* Typography Stuff */
-            font-family: $body-font-family;
-            font-size: $body-font-size;
-            font-weight: $body-font-weight;
-
-            /* Interaction Stuff */
-            &.error {
-                border-color: $error-color;
-            }
-
-            &:focus {
-                outline: none;
-                border-color: $color-primary-700; // Adjust focus style
-            }
-        }
-
-        &__buttons {
-            /* Display Stuff */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* Box Model Stuff */
-            margin-top: $size-10;
-
-            a {
-                /* Box Model Stuff */
-                padding: $size-1;
-                border-radius: $border-radius-2;
-                margin-bottom: $size-1;
-                width: 100%;
-
-                /* Display Stuff */
-                display: flex;
-                justify-content: center;
-                text-align: center;
-
-                /* Typography Stuff */
-                font-family: $body-font-family;
-                font-size: $body-font-size;
-                font-weight: $body-font-weight;
-                text-decoration: none;
-                color: $color-text-default;
-
-                /* Manipulation Stuff */
-                &:hover {
-                    color: $color-primary-700;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
+  }
 }

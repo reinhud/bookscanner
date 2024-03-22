@@ -13,8 +13,8 @@ GOOGLE_BOOKS_SEARCH_KEY = os.getenv("GOOGLE_BOOKS_SEARCH_KEY")
 
 
 def extract_isbn(identifiers: List[dict], isbn_type: str) -> str | None:
-    """
-    Extracts the ISBN from the list of identifiers based on the specified ISBN type.
+    """Extracts the ISBN from the list of identifiers based on the specified
+    ISBN type.
 
     Parameters
     ----------
@@ -35,9 +35,8 @@ def extract_isbn(identifiers: List[dict], isbn_type: str) -> str | None:
 
 
 def search_google_books(query: str, max_books_to_return: int = 3) -> List[BookModel] | None:
-    """
-    Search for books on Google Books API using the provided query and
-    return up to the specified number of books found.
+    """Search for books on Google Books API using the provided query and return
+    up to the specified number of books found.
 
     Parameters
     ----------

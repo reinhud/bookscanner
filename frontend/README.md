@@ -24,10 +24,10 @@ Ensure you have the following installed:
 1. **Open the project in VS Code**:
    Open the root directory of the project in Visual Studio Code.
 
-2. **Start the DevContainer**:
+1. **Start the DevContainer**:
    Use the Remote - Containers extension in VS Code to reopen the project inside the DevContainer. This will create an isolated development environment with all necessary dependencies.
 
-3. **Developing inside the container**:
+1. **Developing inside the container**:
    Once the container is running, you can start the development server with the following command:
 
    ```bash
@@ -42,9 +42,11 @@ Ensure you have the following installed:
 
 To build the application for production, run:
 
-    ```bash
-    docker build -t <your-image-name> .
-    ```
+````
+```bash
+docker build -t <your-image-name> .
+```
+````
 
 This command compiles your Next.js application and prepares it for deployment.
 
@@ -52,12 +54,14 @@ This command compiles your Next.js application and prepares it for deployment.
 
 After building, you can start your application in production mode with:
 
-    ```bash
-    docker run -p <host-port>:<container-port> <your-image-name>
+````
+```bash
+docker run -p <host-port>:<container-port> <your-image-name>
 
-    # Example
-    docker run -p 3000:3000 prod-test
-    ```
+# Example
+docker run -p 3000:3000 prod-test
+```
+````
 
 This starts the Next.js server on the specified port (default: 3000).
 

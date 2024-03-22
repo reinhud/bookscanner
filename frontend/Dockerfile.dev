@@ -39,7 +39,7 @@ COPY /next-app/package.json ./
 
 # Installing production dependencies without updating the lockfile
 # RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod 
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod
 
 RUN echo "Dependancy image build successfully"
 
@@ -53,7 +53,7 @@ FROM base AS dev
 # Specify environment
 ENV NODE_ENV=development
 
-# Installing git 
+# Installing git
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
 # Copying installed node_modules for production dependencies
@@ -69,6 +69,3 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
 EXPOSE 3000
 
 RUN echo "Development image build successfully"
-
-
-

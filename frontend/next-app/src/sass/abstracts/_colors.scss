@@ -44,46 +44,45 @@ $-clr-green-900: hsl(130 75% 7.5%);
 // ===== Abstract ===== //
 // Themes
 $light: (
-    'neutral': (
-        '000': $-clr-white,
-        '100': $-clr-gray-100,
-        '200': $-clr-gray-200,
-        '300': $-clr-gray-300,
-        '400': $-clr-gray-400,
-        '500': $-clr-gray-500,
-        '600': $-clr-gray-600,
-        '700': $-clr-gray-700,
-        '800': $-clr-gray-800,
-        '900': $-clr-gray-900,
-        '1000': $-clr-black
-    ),
-    'primary': (
-        '100': $-clr-green-100,
-        '200': $-clr-green-200,
-        '300': $-clr-green-300,
-        '400': $-clr-green-400,
-        '500': $-clr-green-500,
-        '600': $-clr-green-600,
-        '700': $-clr-green-700,
-        '800': $-clr-green-800,
-        '900': $-clr-green-900
-    ),
-    'accent': (
-        '100': $-clr-red-100,
-        '200': $-clr-red-200,
-        '300': $-clr-red-300,
-        '400': $-clr-red-400,
-        '500': $-clr-red-500,
-        '600': $-clr-red-600,
-        '700': $-clr-red-700,
-        '800': $-clr-red-800,
-        '900': $-clr-red-900
-    ),
-    'error': (
-        'background': $-clr-red-200,
-        'text': $-clr-red-800
-
-    )
+  "neutral": (
+    "000": $-clr-white,
+    "100": $-clr-gray-100,
+    "200": $-clr-gray-200,
+    "300": $-clr-gray-300,
+    "400": $-clr-gray-400,
+    "500": $-clr-gray-500,
+    "600": $-clr-gray-600,
+    "700": $-clr-gray-700,
+    "800": $-clr-gray-800,
+    "900": $-clr-gray-900,
+    "1000": $-clr-black,
+  ),
+  "primary": (
+    "100": $-clr-green-100,
+    "200": $-clr-green-200,
+    "300": $-clr-green-300,
+    "400": $-clr-green-400,
+    "500": $-clr-green-500,
+    "600": $-clr-green-600,
+    "700": $-clr-green-700,
+    "800": $-clr-green-800,
+    "900": $-clr-green-900,
+  ),
+  "accent": (
+    "100": $-clr-red-100,
+    "200": $-clr-red-200,
+    "300": $-clr-red-300,
+    "400": $-clr-red-400,
+    "500": $-clr-red-500,
+    "600": $-clr-red-600,
+    "700": $-clr-red-700,
+    "800": $-clr-red-800,
+    "900": $-clr-red-900,
+  ),
+  "error": (
+    "background": $-clr-red-200,
+    "text": $-clr-red-800,
+  ),
 );
 
 // ===== Contextual ===== //

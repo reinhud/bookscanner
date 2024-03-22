@@ -11,8 +11,8 @@ OPEN_LIBRARY_SEARCH_URL = os.getenv("OPEN_LIBRARY_SEARCH_URL")
 
 
 def extract_isbn(identifiers: List[dict], isbn_length: int) -> str | None:
-    """
-    Extracts the ISBN from the list of identifiers based on the specified ISBN length.
+    """Extracts the ISBN from the list of identifiers based on the specified
+    ISBN length.
 
     Parameters
     ----------
@@ -37,8 +37,7 @@ def extract_isbn(identifiers: List[dict], isbn_length: int) -> str | None:
 
 
 def search_open_library(query: str, max_books_to_return: int = 3) -> List[BookModel] | None:
-    """
-    Search the Open Library API for books using the provided query and
+    """Search the Open Library API for books using the provided query and
     return up to the specified number of books found.
 
     Parameters

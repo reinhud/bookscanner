@@ -23,8 +23,7 @@ auth_router = APIRouter()
 async def login_for_access_token(
     response: Response, form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
 ) -> UserModel:
-    """
-    Endpoint to obtain an access token for authentication.
+    """Endpoint to obtain an access token for authentication.
 
     Parameters
     ----------
@@ -33,8 +32,8 @@ async def login_for_access_token(
 
     Returns
     -------
-   *Token* \\
-        - Token object containing the access token and token type (status code 200).
+    *Token* \\
+            - Token object containing the access token and token type (status code 200).
 
     Raises
     ------
@@ -71,8 +70,7 @@ async def login_for_access_token(
 async def register_for_access_token(
     response: Response, form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
 ) -> UserModel:
-    """
-    Endpoint to register a new user.
+    """Endpoint to register a new user.
 
     Parameters
     ----------
@@ -117,8 +115,7 @@ async def register_for_access_token(
     status_code=status.HTTP_200_OK,
 )
 async def logout(response: Response):
-    """
-    Endpoint to remove the access token cookie.
+    """Endpoint to remove the access token cookie.
 
     Parameters
     ----------

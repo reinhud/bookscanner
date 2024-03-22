@@ -1,66 +1,64 @@
 // ===== Roboto ===== //
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/roboto/roboto-regular-webfont.woff2')
-            format('woff2'),
-        url('../../../public/fonts/roboto/roboto-regular-webfont.woff')
-            format('woff');
+  font-family: "Roboto";
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/roboto/roboto-regular-webfont.woff2")
+      format("woff2"),
+    url("../../../public/fonts/roboto/roboto-regular-webfont.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/roboto/roboto-light-webfont.woff2')
-            format('woff2'),
-        url('../../../public/fonts/roboto/roboto-light-webfont.woff')
-            format('woff');
+  font-family: "Roboto";
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/roboto/roboto-light-webfont.woff2")
+      format("woff2"),
+    url("../../../public/fonts/roboto/roboto-light-webfont.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
-    font-style: bold;
-    font-weight: 900;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/roboto/roboto-bold-webfont.woff2')
-            format('woff2'),
-        url('../../../public/fonts/roboto/roboto-bold-webfont.woff')
-            format('woff');
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/roboto/roboto-bold-webfont.woff2")
+      format("woff2"),
+    url("../../../public/fonts/roboto/roboto-bold-webfont.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/roboto/roboto-italic-webfont.woff2')
-            format('woff2'),
-        url('../../../public/fonts/roboto/roboto-italic-webfont.woff')
-            format('woff');
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/roboto/roboto-italic-webfont.woff2")
+      format("woff2"),
+    url("../../../public/fonts/roboto/roboto-italic-webfont.woff")
+      format("woff");
 }
 
 // ===== Viga ===== //
 @font-face {
-    font-family: 'Viga';
-    font-weight: 700;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/viga/viga.woff2') format('woff2'),
-        url('../../../public/fonts/viga/viga.woff') format('woff');
+  font-family: "Viga";
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/viga/viga.woff2") format("woff2"),
+    url("../../../public/fonts/viga/viga.woff") format("woff");
 }
 
 // ===== Galada ===== //
 @font-face {
-    font-family: 'Galada';
-    font-weight: 700;
-    font-display: swap;
-    src:
-        url('../../../public/fonts/galada/galada.woff2') format('woff2'),
-        url('../../../public/fonts/galada/galada.woff') format('woff');
+  font-family: "Galada";
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../../../public/fonts/galada/galada.woff2") format("woff2"),
+    url("../../../public/fonts/galada/galada.woff") format("woff");
 }

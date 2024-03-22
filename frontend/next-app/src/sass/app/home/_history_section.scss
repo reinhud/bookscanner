@@ -1,17 +1,17 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 .history_section {
-    /* Position Stuff */
-    /* Box Model Stuff */
-    //padding: $size-4;
-    /* Display Stuff */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-template-rows: repeat(2, minmax(220px, 1fr));
-    grid-auto-rows: 0px;
-    position: relative;
-    overflow: hidden;
-    /* Typography Stuff */
-    /* Manipulation Stuff */
-    /* Misc */
+  /* Position Stuff */
+  /* Box Model Stuff */
+  //padding: $size-4;
+  /* Display Stuff */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: repeat(2, minmax(220px, 1fr));
+  grid-auto-rows: 0px;
+  position: relative;
+  overflow: hidden;
+  /* Typography Stuff */
+  /* Manipulation Stuff */
+  /* Misc */
 }

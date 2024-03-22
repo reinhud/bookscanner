@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 services:
-
   frontend-prod:
     container_name: bookscanner-frontend-prod
     image: reinhuddev1/frontend:main

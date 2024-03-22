@@ -1,82 +1,82 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .image-dropzone {
-    /* Position Stuff */
+  /* Position Stuff */
 
-    /* Box Model Stuff */
-    border: 2px solid red;
-    margin: $size-2;
-    border-radius: $border-radius-2;
-    border: 2px dashed $color-background-default;
-    min-width: 4rem;
-    width: 100%;
-    min-height: 4rem;
-    /* Display Stuff */
-    justify-content: center;
-    overflow: hidden;
-    display: flex;
+  /* Box Model Stuff */
+  border: 2px solid red;
+  margin: $size-2;
+  border-radius: $border-radius-2;
+  border: 2px dashed $color-background-default;
+  min-width: 4rem;
+  width: 100%;
+  min-height: 4rem;
+  /* Display Stuff */
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  svg path {
+    stroke: $color-text-default; // Set the stroke color back to its initial state
+  }
+  /* Typography Stuff */
+  /* Manipulation Stuff */
+  /* Misc */
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border: 2px dashed $navigation-color-hover;
     svg path {
-        stroke: $color-text-default; // Set the stroke color back to its initial state
+      stroke: $navigation-color-hover; // Set the stroke color back to its initial state
     }
+  }
+
+  &__preview {
+    /* Position Stuff */
+    position: relative;
+    /* Box Model Stuff */
+    width: 100%;
+    height: 100%;
+    /* Display Stuff */
+    display: flex;
+
     /* Typography Stuff */
     /* Manipulation Stuff */
     /* Misc */
+  }
 
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-        border: 2px dashed $navigation-color-hover;
-        svg path {
-            stroke: $navigation-color-hover; // Set the stroke color back to its initial state
-        }
+  &__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Position Stuff */
+    /* Box Model Stuff */
+    /* Display Stuff */
+    /* Typography Stuff */
+    /* Manipulation Stuff */
+    /* Misc */
+    font-size: $font-size-300;
+    color: $color-neutral-500;
+
+    &__icon {
+      /* Position Stuff */
+      /* Box Model Stuff */
+      max-width: $size-14;
+      /* Display Stuff */
+      /* Typography Stuff */
+      /* Manipulation Stuff */
+      /* Misc */
     }
-
-    &__preview {
-        /* Position Stuff */
-        position: relative;
-        /* Box Model Stuff */
-        width: 100%;
-        height: 100%;
-        /* Display Stuff */
-        display: flex;
-
-        /* Typography Stuff */
-        /* Manipulation Stuff */
-        /* Misc */
+    &__text {
+      /* Position Stuff */
+      text-align: center;
+      /* Box Model Stuff */
+      /* Display Stuff */
+      /* Typography Stuff */
+      font-size: $font-size-400;
+      /* Manipulation Stuff */
+      /* Misc */
     }
-
-    &__placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* Position Stuff */
-        /* Box Model Stuff */
-        /* Display Stuff */
-        /* Typography Stuff */
-        /* Manipulation Stuff */
-        /* Misc */
-        font-size: $font-size-300;
-        color: $color-neutral-500;
-
-        &__icon {
-            /* Position Stuff */
-            /* Box Model Stuff */
-            max-width: $size-14;
-            /* Display Stuff */
-            /* Typography Stuff */
-            /* Manipulation Stuff */
-            /* Misc */
-        }
-        &__text {
-            /* Position Stuff */
-            text-align: center;
-            /* Box Model Stuff */
-            /* Display Stuff */
-            /* Typography Stuff */
-            font-size: $font-size-400;
-            /* Manipulation Stuff */
-            /* Misc */
-        }
-    }
+  }
 }

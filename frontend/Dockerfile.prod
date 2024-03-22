@@ -39,7 +39,7 @@ COPY ./next-app/package.json ./
 
 # Installing production dependencies without updating the lockfile
 # RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod 
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod
 
 RUN echo "Dependancy image build successfully"
 
@@ -48,9 +48,9 @@ RUN echo "Dependancy image build successfully"
 #========= Builder Image =========#
 #==============================================================================#
 
-FROM base as builder 
+FROM base as builder
 
-# Copying the application 
+# Copying the application
 COPY ./next-app ./
 
 # Installing all dependencies, required for the build
@@ -81,7 +81,7 @@ COPY ./next-app/public ./public
 # Copying package.json is necessary to run scripts for starting the app
 COPY ./next-app/package.json ./
 
-# Exposing the port 
+# Exposing the port
 EXPOSE 3000
 
 # Run the app

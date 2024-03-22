@@ -5,9 +5,7 @@ from loguru._defaults import LOGURU_FORMAT
 
 
 def setup_logging() -> None:
-    """
-    Set up logging configuration.
-    """
+    """Set up logging configuration."""
     logger.remove()  # Remove any existing handlers
     logger.add(  # Add standard out handler with colored output
         sink=sys.stderr,  # stdout will be used

@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 
-from fastapi import FastAPI
-import uvicorn
 import os
+
+import uvicorn
+from fastapi import FastAPI
 
 from src.api.routes.router import app_router
 from src.config.fastapi_settings import fastapi_settings
-from src.config.middleware import add_cors_middleware
 from src.config.logger import logger
+from src.config.middleware import add_cors_middleware
 
 
 def get_app() -> FastAPI:
-    """Instanciating and setting up FastAPI application."""
+    """Instantiating and setting up FastAPI application."""
     app = FastAPI(**fastapi_settings)
 
     app.include_router(app_router)
@@ -33,9 +33,4 @@ async def root():
 
 if __name__ == "__main__":
     logger.info("Starting the application")
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=8000,
-        log_level="info"
-    )
+    uvicorn.run("main:app", host=os.getenv("BACKEND_IP"), port=int(os.getenv("BACKEND_IP")), log_level="info")

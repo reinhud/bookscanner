@@ -1,121 +1,121 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .book-card {
+  /* Position Stuff */
+  /* Box Model Stuff */
+  justify-self: center;
+  margin: $size-4;
+  width: 90%;
+  height: 90%;
+  border: 2px solid $color-primary-800;
+  border-radius: $border-radius-2;
+  box-shadow: $box-shadow-neumorphic-neutral;
+
+  //max-width: 200px;
+  //height: 300px;
+  /* Display Stuff */
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Arrange child elements vertically
+  overflow: hidden; // Ensure the card doesn't overflow
+
+  /* Typography Stuff */
+  /* Manipulation Stuff */
+  cursor: pointer;
+  &:hover {
+    box-shadow: $box-shadow-neumorphic-neutral-hover;
+    border: 2px solid $navigation-color-hover;
+  }
+
+  &__seperator {
     /* Position Stuff */
     /* Box Model Stuff */
-    justify-self: center;
-    margin: $size-4;
-    width: 90%;
-    height: 90%;
-    border: 2px solid $color-primary-800;
+    border: 1px solid $color-neutral-200;
     border-radius: $border-radius-2;
-    box-shadow: $box-shadow-neumorphic-neutral;
+    width: 90%;
+    margin-inline: auto;
+    /* Display Stuff */
+    /* Typography Stuff */
+    /* Manipulation Stuff */
+    /* Misc */
+  }
 
-    //max-width: 200px;
-    //height: 300px;
+  &__image {
+    /* Position Stuff */
+    position: relative;
+    /* Box Model Stuff */
+    min-width: 5rem;
+    min-height: 10rem;
+    /* Display Stuff */
+    /* Typography Stuff */
+    /* Manipulation Stuff */
+    /* Misc */
+    overflow: hidden; // Ensure the image doesn't overflow
+    //min-height: 200px; // Set a minimum height for the image
+    height: 60%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    /* Typography Stuff */
+    font-family: $book-card-title-font-family;
+    font-size: $book-card-title-font-size; // Adjust font size
+    font-weight: $book-card-title-font-weight; // Apply bold font weight
+    color: $book-card-title-color;
+    padding: $size-2;
+    //height: 20%;
+  }
+
+  &__content {
+    /* Position Stuff */
+    /* Box Model Stuff */
     /* Display Stuff */
     display: flex; // Use flexbox for layout
     flex-direction: column; // Arrange child elements vertically
-    overflow: hidden; // Ensure the card doesn't overflow
+    //margin: $size-2; // Add padding to the text section
+    height: 30%;
 
-    /* Typography Stuff */
-    /* Manipulation Stuff */
-    cursor: pointer;
-    &:hover {
-        box-shadow: $box-shadow-neumorphic-neutral-hover;
-        border: 2px solid $navigation-color-hover;
-    }
+    &__item {
+      /* Typography Stuff */
+      font-size: $font-size-500; // Adjust font size
+      display: flex; // Use flexbox for layout
+      gap: $size-2; // Add space between the label and value
+      padding: $size-2;
 
-    &__seperator {
+      &__label {
         /* Position Stuff */
         /* Box Model Stuff */
-        border: 1px solid $color-neutral-200;
-        border-radius: $border-radius-2;
-        width: 90%;
-        margin-inline: auto;
         /* Display Stuff */
         /* Typography Stuff */
+        font-size: $book-card-label-font-size;
+        font-weight: $book-card-label-font-weight; // Apply bold font weight
         /* Manipulation Stuff */
         /* Misc */
-    }
+      }
 
-    &__image {
+      &__value {
         /* Position Stuff */
-        position: relative;
         /* Box Model Stuff */
-        min-width: 5rem;
-        min-height: 10rem;
         /* Display Stuff */
         /* Typography Stuff */
+        font-size: $book-card-value-font-size;
+        font-weight: $book-card-value-font-weight; // Apply bold font weight
+
         /* Manipulation Stuff */
         /* Misc */
-        overflow: hidden; // Ensure the image doesn't overflow
-        //min-height: 200px; // Set a minimum height for the image
-        height: 60%;
-    }
 
-    &__title {
-        display: flex;
-        justify-content: center;
-        /* Typography Stuff */
-        font-family: $book-card-title-font-family;
-        font-size: $book-card-title-font-size; // Adjust font size
-        font-weight: $book-card-title-font-weight; // Apply bold font weight
-        color: $book-card-title-color;
-        padding: $size-2;
-        //height: 20%;
-    }
+        &__author {
+          /* Position Stuff */
+          /* Box Model Stuff */
+          /* Display Stuff */
+          display: flex; // Use flexbox for layout
+          flex-direction: column; // Arrange child elements vertically
+          /* Typography Stuff */
 
-    &__content {
-        /* Position Stuff */
-        /* Box Model Stuff */
-        /* Display Stuff */
-        display: flex; // Use flexbox for layout
-        flex-direction: column; // Arrange child elements vertically
-        //margin: $size-2; // Add padding to the text section
-        height: 30%;
-
-        &__item {
-            /* Typography Stuff */
-            font-size: $font-size-500; // Adjust font size
-            display: flex; // Use flexbox for layout
-            gap: $size-2; // Add space between the label and value
-            padding: $size-2;
-
-            &__label {
-                /* Position Stuff */
-                /* Box Model Stuff */
-                /* Display Stuff */
-                /* Typography Stuff */
-                font-size: $book-card-label-font-size;
-                font-weight: $book-card-label-font-weight; // Apply bold font weight
-                /* Manipulation Stuff */
-                /* Misc */
-            }
-
-            &__value {
-                /* Position Stuff */
-                /* Box Model Stuff */
-                /* Display Stuff */
-                /* Typography Stuff */
-                font-size: $book-card-value-font-size;
-                font-weight: $book-card-value-font-weight; // Apply bold font weight
-
-                /* Manipulation Stuff */
-                /* Misc */
-
-                &__author {
-                    /* Position Stuff */
-                    /* Box Model Stuff */
-                    /* Display Stuff */
-                    display: flex; // Use flexbox for layout
-                    flex-direction: column; // Arrange child elements vertically
-                    /* Typography Stuff */
-
-                    /* Manipulation Stuff */
-                    /* Misc */
-                }
-            }
+          /* Manipulation Stuff */
+          /* Misc */
         }
+      }
     }
+  }
 }

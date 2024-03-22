@@ -25,7 +25,7 @@ jobs:
           script: |
             # Change directory to the project directory in server
             cd bookscanner
-    
+
             # Pull the latest changes from the repository
             git pull origin main
 

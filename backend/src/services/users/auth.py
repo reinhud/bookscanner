@@ -4,19 +4,18 @@ from typing import Annotated, Dict, Optional
 
 from fastapi import Depends, HTTPException, Request, status
 from fastapi.openapi.models import OAuthFlows as OAuthFlowsModel
-from fastapi.security import OAuth2, OAuth2PasswordBearer
+from fastapi.security import OAuth2
 from fastapi.security.utils import get_authorization_scheme_param
 from jose import JWTError, jwt
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from src.api.dependancies.firebase import firebase_get, firebase_set
+from src.api.dependencies.firebase import firebase_get, firebase_set
 from src.config.logger import logger
 from src.models.users.users import Token, TokenData, UserInDBModel, UserModel
 
 
 class OAuth2PasswordBearerWithCookie(OAuth2):
-    """
-    Class for validating and retrieving access tokens from HTTP-only cookies.
+    """Class for validating and retrieving access tokens from HTTP-only cookies.
 
     Parameters
     ----------
@@ -47,8 +46,7 @@ class OAuth2PasswordBearerWithCookie(OAuth2):
         super().__init__(flows=flows, scheme_name=scheme_name, auto_error=auto_error)
 
     async def __call__(self, request: Request) -> Token:
-        """
-        Validate and retrieve the access token from the HTTP-only cookie.
+        """Validate and retrieve the access token from the HTTP-only cookie.
 
         Parameters
         ----------
@@ -95,8 +93,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("AUTH_ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 
 def verify_password(hashed_password: str, plain_password: str) -> bool:
-    """
-    Verify if a plain text password matches the hashed password.
+    """Verify if a plain text password matches the hashed password.
 
     Parameters
     ----------
@@ -114,8 +111,7 @@ def verify_password(hashed_password: str, plain_password: str) -> bool:
 
 
 def get_password_hash(plain_password: str) -> str:
-    """
-    Generate a hashed password from a plain text password.
+    """Generate a hashed password from a plain text password.
 
     Parameters
     ----------
@@ -131,8 +127,7 @@ def get_password_hash(plain_password: str) -> str:
 
 
 def get_user(username: str) -> UserInDBModel | None:
-    """
-    Retrieve user data from the database.
+    """Retrieve user data from the database.
 
     Parameters
     ----------
@@ -155,8 +150,7 @@ def get_user(username: str) -> UserInDBModel | None:
 
 
 def authenticate_user(username: str, password: str) -> UserInDBModel | bool:
-    """
-    Authenticate a user with the provided username and password.
+    """Authenticate a user with the provided username and password.
 
     Parameters
     ----------
@@ -190,8 +184,7 @@ def authenticate_user(username: str, password: str) -> UserInDBModel | bool:
 
 
 def create_user(username: str, password: str) -> UserInDBModel | None:
-    """
-    Create a new user in the database.
+    """Create a new user in the database.
 
     Parameters
     ----------
@@ -227,8 +220,7 @@ def create_user(username: str, password: str) -> UserInDBModel | None:
 
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None) -> str:
-    """
-    Create an access token with the provided data.
+    """Create an access token with the provided data.
 
     Parameters
     ----------
@@ -264,8 +256,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None) -> s
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]) -> UserModel:
-    """
-    Retrieve the current user from the access token.
+    """Retrieve the current user from the access token.
 
     Parameters
     ----------

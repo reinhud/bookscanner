@@ -1,16 +1,16 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 main {
-    /* Position Stuff */
-    /* Box Model Stuff */
-    padding: $size-8;
-    border-color: red;
-    /* Display Stuff */
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-row-gap: $size-6;
+  /* Position Stuff */
+  /* Box Model Stuff */
+  padding: $size-8;
+  border-color: red;
+  /* Display Stuff */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-row-gap: $size-6;
 
-    /* Typography Stuff */
-    /* Manipulation Stuff */
-    /* Misc */
+  /* Typography Stuff */
+  /* Manipulation Stuff */
+  /* Misc */
 }

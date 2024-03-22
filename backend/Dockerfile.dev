@@ -44,7 +44,7 @@ RUN apt-get update && \
     build-essential \
     python3-opencv \
     # required for pyzbar
-    libzbar0 \  
+    libzbar0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME.
@@ -62,7 +62,7 @@ RUN echo "Base image built successfully"
 #==============================================================================#
 #========= Development Image =========#
 #==============================================================================#
-FROM base as dev 
+FROM base as dev
 
 # Specify environment.
 ENV ENVIRONMENT="development"

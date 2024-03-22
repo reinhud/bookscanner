@@ -1,6 +1,6 @@
-@use 'colors' as *;
-@use 'typography' as *;
-@use 'sizes' as *;
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
 
 // ==================== Defaults ==================== //
 // ===== Theming ===== //
@@ -20,11 +20,11 @@ $border-radius-2: $size-4;
 $drop-shadow-hover: 2px 2px 5px $color-primary-900;
 $drop-shadow-neutral: 5px 5px 10px $color-primary-900;
 $box-shadow-neumorphic-neutral:
-    5px 5px 10px $color-neutral-300,
-    -5px -5px 10px $color-neutral-000;
+  5px 5px 10px $color-neutral-300,
+  -5px -5px 10px $color-neutral-000;
 $box-shadow-neumorphic-neutral-hover:
-    3px 3px 6px $color-neutral-200,
-    -3px -3px 6px $color-neutral-000;
+  3px 3px 6px $color-neutral-200,
+  -3px -3px 6px $color-neutral-000;
 
 // ===== Container ===== //
 $container-min-margin-inline: $size-4;
@@ -129,7 +129,6 @@ $login-modal-link-color-hover: $navigation-color-hover;
 $login-modal-link-font-family: $font-family-base;
 $login-modal-link-font-size: $font-size-400;
 
-
 // ===== Book Search Box ===== //
 $book-search-box-background-color: $color-primary-800;
 $book-search-box-border-radius: $border-radius-2;
@@ -154,7 +153,6 @@ $search-modal-font-family: $font-family-accent;
 $search-modal-font-weight: $header-font-weight;
 $search-modal-font-size: $font-size-600;
 $search-modal-color: $color-text-default;
-
 
 // ===== Body ===== //
 $body-font-family: $font-family-base;

@@ -4,7 +4,7 @@ description = """
 Bookscanner📚 API helps you find books easily!
 
 
-Welcome to the Bookscanner API, your go-to solution for easily finding books. 
+Welcome to the Bookscanner API, your go-to solution for easily finding books.
 This backend powers the Bookscanner app, offering a range of endpoints for user management and book search.
 Utilizing APIs from [Google Books](https://books.google.de/) and [Open Library](https://openlibrary.org/),
 it delivers comprehensive book search functionality. [Firebase](https://firebase.google.com/) serves as
@@ -12,7 +12,7 @@ the lightweight database, ensuring seamless data management. 🚀
 
 
 ## Authentication
-Authentification is handled via OAuth2 and [JWT Tokens](https://jwt.io/) access tokens. .
+Authentication is handled via OAuth2 and [JWT Tokens](https://jwt.io/) access tokens. .
 You can use the `/login` endpoint to get a token and use it to access the other endpoints.
 The token expires after some time (currently 30 min), so you will need to login again to get a new token.
 The registration endpoint also returns a token.
