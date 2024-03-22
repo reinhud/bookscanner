@@ -37,7 +37,7 @@ Provide instructions for installing and setting up the project locally. Include 
 
 ```bash
 # Example installation commands
-$ git clone gh repo clone reinhud/bookscanner_refactor
+$ git clone gh repo clone reinhud/bookscanner
 ```
 
 Deploying for production:

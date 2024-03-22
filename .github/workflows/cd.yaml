@@ -24,7 +24,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             # Change directory to the project directory in server
-            cd bookscanner_refactor
+            cd bookscanner
     
             # Pull the latest changes from the repository
             git pull origin main
