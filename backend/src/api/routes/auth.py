@@ -69,7 +69,7 @@ async def login_for_access_token(
     status_code=status.HTTP_201_CREATED,
 )
 async def register_for_access_token(
-    form_data: Annotated[OAuth2PasswordRequestForm, Depends()], response: Response
+    response: Response, form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
 ) -> UserModel:
     """
     Endpoint to register a new user.

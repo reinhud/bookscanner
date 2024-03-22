@@ -27,7 +27,7 @@ const useUserSignUp = () => {
     // Effect hook to handle API response
     useEffect(() => {
         if (response && !isLoading) {
-            if (!isError && response.status === 200) {
+            if (!isError && response.status === 201) {
                 // Dispatch user login action to update Redux store
                 dispatch(signup(formUser!));
                 setIsLoggedIn(true); // Set login status to true

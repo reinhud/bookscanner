@@ -24,4 +24,4 @@ test:
 
 serve:
 	@echo "Serving the app..."
-	poetry run uvicorn src.main:app --reload
+	poetry run uvicorn src.main:app --host=0.0.0.0 --reload
